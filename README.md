@@ -46,7 +46,7 @@ The project utilizes publicly available data from multiple economic sources:
 
 These datasets cover multiple years, allowing for a robust analysis of long-term trends and short-term fluctuations in economic indicators.
 
-## Methodology
+# Methodology
 1. **Data Cleaning & Preprocessing:**
    - Handle missing values and ensure consistency across datasets.
    - Convert all data to a common time format (quarterly basis).
