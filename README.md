@@ -27,21 +27,21 @@ The central objective of this project is to establish empirical relationships be
 # Data Sources
 The project utilizes publicly available data from multiple economic sources:
 - **Personal Consumption Expenditure Data:**
-  - Canada: `Real Final Consumption Expenditure for Canada.csv`
-  - United States: `Real Final Consumption Expenditure for US.csv`
-  - United Kingdom: `Real Final Consumption Expenditure for United Kingdom.csv`
+  - Canada: [Real Final Consumption Expenditure for Canada.csv](https://fred.stlouisfed.org/series/NCRSAXDCCAQ)
+  - United States: [Real Final Consumption Expenditure for US.csv](https://fred.stlouisfed.org/series/NCRSAXDCUSQ)
+  - United Kingdom: [`Real Final Consumption Expenditure for United Kingdom.csv`](https://fred.stlouisfed.org/series/NCRSAXDCGBQ)
 - **Unemployment Rate Data:**
-  - Canada: `Unemployment Rate Total in Canada.csv`
-  - United States: `Unemployment Rate Total in US.csv`
-  - United Kingdom: Extracted from `Data_Extract_FromWorld Development Indicators.xlsx`
+  - Canada: [`Unemployment Rate Total in Canada.csv`] ()
+  - United States: [`Unemployment Rate Total in US.csv`] ()
+  - United Kingdom: Extracted from [`Data_Extract_FromWorld Development Indicators.xlsx`] ()
 - **Inflation Data:**
-  - Canada: `Inflation, consumer prices for Canada.csv`
-  - United States: `Inflation, consumer prices for United States.csv`
-  - United Kingdom: `Inflation, consumer prices in UK.xlsx`
+  - Canada: [`Inflation, consumer prices for Canada.csv`] ()
+  - United States: [`Inflation, consumer prices for United States.csv`] ()
+  - United Kingdom: [`Inflation, consumer prices in UK.xlsx`] ()
 - **Real Residential Property Prices:**
-  - Canada: `Real Residential Property Prices for Canada.csv`
-  - United States: `Real Residential Property Prices for US.xlsx`
-  - United Kingdom: `Real Residential Property Prices UK.csv`
+  - Canada: [`Real Residential Property Prices for Canada.csv`](https://fred.stlouisfed.org/series/QCAR628BIS)
+  - United States: [`Real Residential Property Prices for US.xlsx`](https://fred.stlouisfed.org/series/QUSR368BIS)
+  - United Kingdom: [`Real Residential Property Prices UK.csv`](https://fred.stlouisfed.org/series/QGBR368BIS)
 
 These datasets cover multiple years, allowing for a robust analysis of long-term trends and short-term fluctuations in economic indicators.
 
