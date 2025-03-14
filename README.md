@@ -1,9 +1,8 @@
 # Economic Factors & Consumption
 DSA210_TermProject
-# Economic Factors and Their Impact on Personal Consumption Expenditure
 
 # Introduction
-This project explores the relationship between key economic factors—such as unemployment rates, inflation, and inflation-adjusted housing prices—and personal consumption expenditure. Our goal is to determine the extent to which these macroeconomic indicators influence consumer spending habits over time and whether they exhibit seasonal patterns. The study focuses on three major economies: Canada, the United States, and the United Kingdom.
+This project explores the relationship between key economic factors such as unemployment rates, inflation, and inflation-adjusted housing prices—and personal consumption expenditure. Our goal is to determine the extent to which these macroeconomic indicators influence consumer spending habits over time and whether they exhibit seasonal patterns. The study focuses on three major economies: Canada, the United States, and the United Kingdom.
 
 Personal consumption expenditure (PCE) is a vital economic indicator, reflecting the overall economic health of a country. Fluctuations in PCE often correlate with economic downturns, periods of inflation, and labor market shifts. By analyzing these factors across different countries and economic conditions, this study aims to provide deeper insights into consumer behavior and macroeconomic trends.
 
