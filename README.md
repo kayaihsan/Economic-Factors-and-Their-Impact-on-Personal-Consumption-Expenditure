@@ -31,13 +31,13 @@ The project utilizes publicly available data from multiple economic sources:
   - United States: [Real Final Consumption Expenditure for US.csv](https://fred.stlouisfed.org/series/NCRSAXDCUSQ)
   - United Kingdom: [`Real Final Consumption Expenditure for United Kingdom.csv`](https://fred.stlouisfed.org/series/NCRSAXDCGBQ)
 - **Unemployment Rate Data:**
-  - Canada: [`Unemployment Rate Total in Canada.csv`] ()
-  - United States: [`Unemployment Rate Total in US.csv`] ()
-  - United Kingdom: Extracted from [`Data_Extract_FromWorld Development Indicators.xlsx`] ()
+  - Canada: [`Unemployment Rate Total in Canada.csv`](https://fred.stlouisfed.org/series/LRUNTTTTCAM156S)
+  - United States: [`Unemployment Rate Total in US.csv`](https://fred.stlouisfed.org/series/UNRATE)
+  - United Kingdom: Extracted from [`Data_Extract_FromWorld Development Indicators.xlsx`](https://fred.stlouisfed.org/series/LRUNTTTTGBQ156S)
 - **Inflation Data:**
-  - Canada: [`Inflation, consumer prices for Canada.csv`] ()
-  - United States: [`Inflation, consumer prices for United States.csv`] ()
-  - United Kingdom: [`Inflation, consumer prices in UK.xlsx`] ()
+  - Canada: [`Inflation, consumer prices for Canada.csv`](https://fred.stlouisfed.org/series/FPCPITOTLZGCAN)
+  - United States: [`Inflation, consumer prices for United States.csv`](https://fred.stlouisfed.org/series/FPCPITOTLZGUSA)
+  - United Kingdom: [`Inflation, consumer prices in UK.csv`](https://fred.stlouisfed.org/series/FPCPITOTLZGGBR)
 - **Real Residential Property Prices:**
   - Canada: [`Real Residential Property Prices for Canada.csv`](https://fred.stlouisfed.org/series/QCAR628BIS)
   - United States: [`Real Residential Property Prices for US.xlsx`](https://fred.stlouisfed.org/series/QUSR368BIS)
