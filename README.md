@@ -1,2 +1,2 @@
-# Economic-Factors-and-Their-Impact-on-Personal-Consumption-Expenditure
+# Economic Factors & Consumption
 DSA210_TermProject
