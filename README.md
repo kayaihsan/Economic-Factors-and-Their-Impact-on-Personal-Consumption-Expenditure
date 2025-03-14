@@ -24,24 +24,23 @@ The central objective of this project is to establish empirical relationships be
 - Apply statistical models to assess the predictive power of economic indicators on future personal consumption trends.
 - Investigate how changes in real residential property prices affect consumer confidence and personal consumption.
 
-# Data Sources
-The project utilizes publicly available data from multiple economic sources:
-- **Personal Consumption Expenditure Data:**
-  - Canada: [Real Final Consumption Expenditure for Canada.csv](https://fred.stlouisfed.org/series/NCRSAXDCCAQ)
-  - United States: [Real Final Consumption Expenditure for US.csv](https://fred.stlouisfed.org/series/NCRSAXDCUSQ)
-  - United Kingdom: [`Real Final Consumption Expenditure for United Kingdom.csv`](https://fred.stlouisfed.org/series/NCRSAXDCGBQ)
-- **Unemployment Rate Data:**
-  - Canada: [`Unemployment Rate Total in Canada.csv`](https://fred.stlouisfed.org/series/LRUNTTTTCAM156S)
-  - United States: [`Unemployment Rate Total in US.csv`](https://fred.stlouisfed.org/series/UNRATE)
-  - United Kingdom: Extracted from [`Data_Extract_FromWorld Development Indicators.xlsx`](https://fred.stlouisfed.org/series/LRUNTTTTGBQ156S)
-- **Inflation Data:**
-  - Canada: [`Inflation, consumer prices for Canada.csv`](https://fred.stlouisfed.org/series/FPCPITOTLZGCAN)
-  - United States: [`Inflation, consumer prices for United States.csv`](https://fred.stlouisfed.org/series/FPCPITOTLZGUSA)
-  - United Kingdom: [`Inflation, consumer prices in UK.csv`](https://fred.stlouisfed.org/series/FPCPITOTLZGGBR)
-- **Real Residential Property Prices:**
-  - Canada: [`Real Residential Property Prices for Canada.csv`](https://fred.stlouisfed.org/series/QCAR628BIS)
-  - United States: [`Real Residential Property Prices for US.xlsx`](https://fred.stlouisfed.org/series/QUSR368BIS)
-  - United Kingdom: [`Real Residential Property Prices UK.csv`](https://fred.stlouisfed.org/series/QGBR368BIS)
+# Data Sources  
+
+| #  | Data Type | Country | Source Link | Years Covered |
+|----|------------|---------|-------------|---------------|
+| 1  | Personal Consumption Expenditure | Canada | [Link](https://fred.stlouisfed.org/series/NCRSAXDCCAQ) | 1990-2023 |
+| 2  | Personal Consumption Expenditure | US | [Link](https://fred.stlouisfed.org/series/NCRSAXDCUSQ) | 1985-2023 |
+| 3  | Personal Consumption Expenditure | UK | [Link](https://fred.stlouisfed.org/series/NCRSAXDCGBQ) | 1995-2023 |
+| 4  | Unemployment Rate | Canada | [Link](https://fred.stlouisfed.org/series/LRUNTTTTCAM156S) | 1976-2023 |
+| 5  | Unemployment Rate | US | [Link](https://fred.stlouisfed.org/series/UNRATE) | 1948-2023 |
+| 6  | Unemployment Rate | UK | [Link](https://fred.stlouisfed.org/series/LRUNTTTTGBQ156S) | 1980-2023 |
+| 7  | Inflation | Canada | [Link](https://fred.stlouisfed.org/series/FPCPITOTLZGCAN) | 1960-2023 |
+| 8  | Inflation | US | [Link](https://fred.stlouisfed.org/series/FPCPITOTLZGUSA) | 1960-2023 |
+| 9  | Inflation | UK | [Link](https://fred.stlouisfed.org/series/FPCPITOTLZGGBR) | 1960-2023 |
+| 10 | Real Residential Property Prices | Canada | [Link](https://fred.stlouisfed.org/series/QCAR628BIS) | 1970-2023 |
+| 11 | Real Residential Property Prices | US | [Link](https://fred.stlouisfed.org/series/QUSR368BIS) | 1975-2023 |
+| 12 | Real Residential Property Prices | UK | [Link](https://fred.stlouisfed.org/series/QGBR368BIS) | 1973-2023 |
+
 
 These datasets cover multiple years, allowing for a robust analysis of long-term trends and short-term fluctuations in economic indicators.
 
