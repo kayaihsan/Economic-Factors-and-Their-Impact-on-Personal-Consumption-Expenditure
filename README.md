@@ -467,11 +467,10 @@ A hypothesis was **rejected** if the p-value was less than 0.05.
 
 ---
 ## 📌 Summary: 
-> Across the three countries, we observe **heterogeneous impacts** of inflation:
->
-> - In **Canada**, both the housing market and consumption are sensitive to inflation.  
-> - In the **UK**, the **housing market alone** reacts significantly.  
-> - In the **US**, **only consumption expenditure** is significantly affected.
->
-> These differences may arise from varying housing finance systems, consumer credit dynamics, or institutional responses to inflation.  
-> Thus, **macro-level inflation does not produce uniform outcomes**, and economic policies must be tailored to country-specific structures and vulnerabilities.
+Across the three countries, we observe **heterogeneous impacts** of inflation:
+- In **Canada**, both the housing market and consumption are sensitive to inflation.  
+- In the **UK**, the **housing market alone** reacts significantly.  
+- In the **US**, **only consumption expenditure** is significantly affected.
+
+These differences may arise from varying housing finance systems, consumer credit dynamics, or institutional responses to inflation.  
+Thus, **macro-level inflation does not produce uniform outcomes**, and economic policies must be tailored to country-specific structures and vulnerabilities.
