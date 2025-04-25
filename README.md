@@ -164,3 +164,22 @@ We computed pairwise Pearson correlations to understand relationships among our 
 > - **Canada:** Property_Prices & Consumption_Expenditure very strongly correlated (0.94).  
 > - **UK:** Unemployment_Rate shows moderate negative link with Consumption_Expenditure (-0.57).  
 > - **USA:** Inflation & Consumption_Expenditure moderately negative (-0.53).
+
+### 4. Scatter Plot Analysis (with Log Transformations)
+
+To gain deeper insight into the relationships between variables—especially where large outliers might obscure patterns—we applied a logarithmic transformation to selected indicators. This helped normalize skewed data and clarify trends. Below, we present scatter plots for each country after applying these transformations.
+
+#### Canada  
+![Scatter Plot - Canada](images/canada_scatter.png)  
+The log transformation highlights a clear nonlinear association between Property_Prices and Consumption_Expenditure.
+
+#### UK  
+![Scatter Plot - UK](images/uk_scatter.png)  
+In the UK, the log scale makes the inverse trend between Unemployment_Rate and Consumption_Expenditure more apparent.
+
+#### USA  
+![Scatter Plot - USA](images/usa_scatter.png)  
+For the US, log-transformed scatter plots better reveal the moderate negative correlation between Inflation and Consumption_Expenditure.
+
+> **Note:** All scatter plots are based on log-transformed values where appropriate (e.g., for Property_Prices and Consumption_Expenditure).
+
