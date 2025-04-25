@@ -134,7 +134,7 @@ We tested each feature for outliers using the Interquartile Range (IQR) method. 
 We computed pairwise Pearson correlations to understand relationships among our indicators. A heatmap and numeric matrices for each country are shown below.
 
 #### Canada  
-![Heatmap - Canada](outputs/corr_heatmap_canada.png)  
+![Heatmap - Canada](uk_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
 | **Inflation**            |      1.00 |             -0.05 |           -0.37 |                   -0.56 |
@@ -143,7 +143,7 @@ We computed pairwise Pearson correlations to understand relationships among our 
 | **Consumption_Expenditure** |  -0.56 |             -0.31 |            0.94 |                    1.00 |
 
 #### UK  
-![Heatmap - UK](outputs/corr_heatmap_uk.png)  
+![Heatmap - UK](uk_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
 | **Inflation**            |      1.00 |             -0.08 |           -0.54 |                    0.33 |
