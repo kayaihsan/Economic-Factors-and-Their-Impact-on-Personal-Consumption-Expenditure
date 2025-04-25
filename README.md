@@ -410,13 +410,17 @@ For each country, we analyzed the relationship between Inflation and the followi
 
 ### 7. 📊 Hypothesis Testing Results
 
-To statistically validate our assumptions, we performed **simple linear regression analyses** with **Inflation** as the independent variable and tested the following:
+To statistically validate the effect of **inflation** on each economic indicator, we conducted **Simple Linear Regression (OLS)** analyses using a 5% significance level (α = 0.05).
 
-- Whether inflation has a statistically significant effect on each indicator
-- Using a **significance level of 0.05 (α = 0.05)**
-- Decisions are based on p-values:  
+For each country, we tested the following hypotheses:
+
+- **Null Hypothesis (H₀):** Inflation has **no significant effect** on the dependent variable.  
+- **Alternative Hypothesis (H₁):** Inflation has a **significant effect** on the dependent variable.
+
+A hypothesis was **rejected** if the p-value was less than 0.05.
   - If *p < 0.05* → Reject H₀  
   - If *p ≥ 0.05* → Fail to Reject H₀
+
 
 #### Canada
 
@@ -427,6 +431,9 @@ To statistically validate our assumptions, we performed **simple linear regressi
 | Log_Consumption_Expenditure  |                  -0.0793 |    12.7505 |     0.3720 |  0.0000 | **Reject H₀**            |
 
 > ✅ **Significant negative effects** found on property prices and consumption expenditure.
+> 📌 **Interpretation:**  
+> In Canada, inflation has a statistically significant **negative** effect on both **property prices** and **consumption expenditure**, while it has no meaningful impact on unemployment.  
+> This suggests that inflationary pressure erodes consumer spending power and suppresses housing market activity.
 
 ---
 
@@ -439,6 +446,9 @@ To statistically validate our assumptions, we performed **simple linear regressi
 | Log_Consumption_Expenditure  |                   0.0335 |    12.8848 |     0.0853 |  0.1242 | Fail to Reject H₀        |
 
 > ✅ Only **property prices** are significantly affected by inflation in the UK.
+> 📌 **Interpretation:**  
+> In the UK, inflation shows a strong negative effect on **property prices**, but has **no significant effect** on either unemployment or consumption expenditure.  
+> The sensitivity of the UK housing market to inflation may reflect structural vulnerabilities, such as mortgage exposure or housing supply constraints.
 
 ---
 
@@ -451,11 +461,18 @@ To statistically validate our assumptions, we performed **simple linear regressi
 | Log_Consumption_Expenditure  |                  -0.0994 |    14.8525 |     0.3587 |  0.0000 | **Reject H₀**            |
 
 > ✅ In the USA, **only consumption expenditure** shows a statistically significant (and negative) relationship with inflation.
+> 📌 **Interpretation:**  
+> In the US, inflation has a **significant negative effect** on **consumption expenditure**, while it has **no meaningful effect** on property prices or unemployment.  
+> This indicates that American households may react more immediately to price volatility, possibly due to lower saving rates or higher debt sensitivity.
 
 ---
 
 > 📌 **Summary:**  
-> - Inflation significantly impacts **consumption expenditure** in **Canada and the USA**.  
-> - **Property prices** are most affected in the **UK**.  
-> - **Unemployment rate** is not significantly impacted by inflation in any country.
-
+> Across the three countries, we observe **heterogeneous impacts** of inflation:
+>
+> - In **Canada**, both the housing market and consumption are sensitive to inflation.  
+> - In the **UK**, the **housing market alone** reacts significantly.  
+> - In the **US**, **only consumption expenditure** is significantly affected.
+>
+> These differences may arise from varying housing finance systems, consumer credit dynamics, or institutional responses to inflation.  
+> Thus, **macro-level inflation does not produce uniform outcomes**, and economic policies must be tailored to country-specific structures and vulnerabilities.
