@@ -2,24 +2,22 @@
 DSA210_TermProject
 
 ## 📑 Table of Contents
-1. [📌 Introduction](#Introduction)  
-2. [Motivation](#Motivation)  
-3. [Project Goal](#Project-Goal)  
-4. [Project Structure](#Project-Structure)  
-5. [Data Sources](#Data-Sources)  
-6. [Methodology](#Methodology)  
-7. [Hypothesis](#Hypothesis)  
-8. [Findings](#Findings)  
-   1. [Missing Value Analysis](#1-Missing-Value-Analysis)  
-   2. [Outlier Analysis](#2-Outlier-Analysis-(IQR-Method))  
-   3. [Correlation Analysis](#3-Correlation-Analysis)  
-   4. [Scatter Plot Analysis](#4-Scatter-Plot-Analysis-(with-Log-Transformations))  
-   5. [Regression Analysis](#5-Regression-Analysis:-Impact-of-Inflation-on-Key-Indicators)  
-   6. [Visual Regression Relationships](#6-Visualizing-Regression-Relationships)  
-   7. [Hypothesis Testing Results](#7-📊-Hypothesis-Testing-Results)  
+1. [Introduction](#introduction)  
+2. [Motivation](#motivation)  
+3. [Project Goal](#project-goal)  
+4. [Project Structure](#project-structure)  
+5. [Data Sources](#data-sources)  
+6. [Methodology](#methodology)  
+7. [Hypothesis](#hypothesis)  
+8. [Findings](#findings)  
+   1. [Missing Value Analysis](#missing-value-analysis)  
+   2. [Outlier Analysis (IQR Method)](#outlier-analysis-iqr-method)  
+   3. [Correlation Analysis](#correlation-analysis)  
+   4. [Scatter Plot Analysis (with Log Transformations)](#scatter-plot-analysis-with-log-transformations)  
+   5. [Regression Analysis: Impact of Inflation on Key Indicators](#regression-analysis-impact-of-inflation-on-key-indicators)  
+   6. [Visualizing Regression Relationships](#visualizing-regression-relationships)  
+   7. [Hypothesis Testing Results](#hypothesis-testing-results)  
 
-
----
 ## 📌 Introduction
 
 This project explores the relationship between key macroeconomic indicators **inflation**, **unemployment rates**, and **inflation-adjusted property prices** and **personal consumption expenditure (PCE)**. The goal is to determine the extent to which these variables influence consumer spending habits over time and whether they display consistent patterns across different economies.
