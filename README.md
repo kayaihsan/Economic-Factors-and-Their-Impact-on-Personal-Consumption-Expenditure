@@ -12,26 +12,41 @@ By analyzing these dynamics in **Canada**, the **United States**, and the **Unit
 > 📊 Through a combination of correlation analysis, regression modeling, and visualization, we aim to draw meaningful conclusions about inflation’s role in shaping economic outcomes.
 
 
-# Motivation
-Macroeconomic conditions significantly impact individuals' purchasing power and spending behavior. Understanding these relationships is crucial for policymakers, economists, businesses, and consumers alike. The research aims to address several critical questions:
-- How do inflation rates, unemployment levels, and housing prices collectively influence personal consumption expenditure?
-- Do specific economic indicators have a stronger impact on PCE than others?
-- Can we identify recurring seasonal patterns in economic shifts and their effects on consumer behavior?
-- Are there country-specific variations in how economic factors influence spending habits, or do similar trends emerge across multiple economies?
-- How do real residential property prices impact consumer confidence and expenditure patterns?
-- What is the role of war as an economic factor, and how does it affect personal consumption trends?
-- How do wartime periods impact inflation, unemployment, and consumer spending behavior in Canada, the US, and the UK?
+## 🚀 Motivation
 
-Examining these questions can help provide more accurate economic forecasts, guide monetary policies, and assist businesses in strategic planning.
+Macroeconomic conditions—such as inflation, unemployment, and housing market dynamics—directly influence individuals' purchasing power and spending behavior. Understanding these relationships is essential for policymakers, economists, businesses, and consumers seeking to anticipate economic shifts and adapt accordingly.
 
-# Project Goal
-The central objective of this project is to establish empirical relationships between macroeconomic variables, historical wartime periods, and personal consumption expenditure. Specifically, we aim to:
-- Examine historical trends to determine the impact of economic factors on personal consumption across different time periods.
-- Identify seasonal patterns in consumer spending based on quarterly data.
-- Compare findings across three countries to determine the similarities and differences in economic behavior.
-- Apply statistical models to assess the predictive power of economic indicators on future personal consumption trends.
-- Investigate how changes in real residential property prices affect consumer confidence and personal consumption.
-- Analyze how wartime events influence macroeconomic trends and personal consumption behavior.
+This project is driven by the following key questions:
+- How do inflation rates, unemployment levels, and housing prices collectively influence personal consumption expenditure (PCE)?
+- Are certain economic indicators more strongly correlated with PCE changes than others?
+- Do cross-country comparisons (Canada, USA, UK) reveal similar or distinct trends in consumer behavior?
+- How do fluctuations in real residential property prices affect consumer confidence and spending patterns?
+
+By addressing these questions, the study aims to:
+- Provide data-driven insights into the complex interplay between macroeconomic indicators and consumer behavior.
+- Support better-informed economic forecasting and policy-making.
+- Help businesses understand broader spending trends for more strategic decision-making.
+
+
+
+## 🎯 Project Goal
+
+The primary goal of this project is to **analyze the impact of inflation** on key economic indicators such as:
+
+- Property Prices (log-transformed)
+- Unemployment Rate
+- Consumption Expenditure (log-transformed)
+
+across three major economies: **Canada**, **United Kingdom**, and **United States**.
+
+Through correlation analysis, regression modeling, and visual exploration, we aim to:
+
+- Quantify how inflation affects housing markets, labor markets, and consumer behavior.
+- Identify consistent patterns or differences across countries.
+- Provide meaningful economic insights backed by statistical evidence and data visualization.
+
+Ultimately, this project seeks to bridge raw economic data with intuitive visual narratives, enabling a clearer understanding of how macroeconomic pressures influence everyday economic activities.
+
 
 # Data Sources  
 
