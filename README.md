@@ -466,8 +466,7 @@ A hypothesis was **rejected** if the p-value was less than 0.05.
 > This indicates that American households may react more immediately to price volatility, possibly due to lower saving rates or higher debt sensitivity.
 
 ---
-
-> 📌 **Summary:**  
+## 📌 Summary: 
 > Across the three countries, we observe **heterogeneous impacts** of inflation:
 >
 > - In **Canada**, both the housing market and consumption are sensitive to inflation.  
