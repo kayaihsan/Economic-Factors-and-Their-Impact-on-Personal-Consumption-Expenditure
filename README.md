@@ -297,7 +297,8 @@ For each country, we analyzed the relationship between Inflation and the followi
 > 🔍 **Conclusion:**  
 > These plots provide visual support for our regression findings. In particular, **log-transformed consumption expenditure** appears **consistently and negatively associated** with inflation in both Canada and the US, while property prices are most sensitive to inflation in the UK.
 >
-> ### 7. 📊 Hypothesis Testing Results
+
+### 7. 📊 Hypothesis Testing Results
 
 To statistically validate our assumptions, we performed **simple linear regression analyses** with **Inflation** as the independent variable and tested the following:
 
@@ -307,7 +308,7 @@ To statistically validate our assumptions, we performed **simple linear regressi
   - If *p < 0.05* → Reject H₀  
   - If *p ≥ 0.05* → Fail to Reject H₀
 
-#### 🇨🇦 Canada
+#### Canada
 
 | Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
 |------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
@@ -319,7 +320,7 @@ To statistically validate our assumptions, we performed **simple linear regressi
 
 ---
 
-#### 🇬🇧 UK
+#### UK
 
 | Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
 |------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
@@ -331,7 +332,7 @@ To statistically validate our assumptions, we performed **simple linear regressi
 
 ---
 
-#### 🇺🇸 USA
+#### USA
 
 | Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
 |------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
