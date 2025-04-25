@@ -4,19 +4,11 @@ DSA210_TermProject
 ## 📑 Table of Contents
 1. [Introduction](#introduction)  
 2. [Motivation](#motivation)  
-3. [Project Goal](#project-goal)  
-4. [Project Structure](#project-structure)  
-5. [Data Sources](#data-sources)  
-6. [Methodology](#methodology)  
-7. [Hypothesis](#hypothesis)  
-8. [Findings](#findings)  
-   1. [Missing Value Analysis](#missing-value-analysis)  
-   2. [Outlier Analysis (IQR Method)](#outlier-analysis-iqr-method)  
-   3. [Correlation Analysis](#correlation-analysis)  
-   4. [Scatter Plot Analysis (with Log Transformations)](#scatter-plot-analysis-with-log-transformations)  
-   5. [Regression Analysis: Impact of Inflation on Key Indicators](#regression-analysis-impact-of-inflation-on-key-indicators)  
-   6. [Visualizing Regression Relationships](#visualizing-regression-relationships)  
-   7. [Hypothesis Testing Results](#hypothesis-testing-results)  
+3. [Project Goal](#project-goal)
+4. [Data Sources](#data-sources)
+5. [Methodology](#methodology)
+6. [Hypothesis](#hypothesis)
+7. [Findings](#findings)   
 
 ## Introduction
 
