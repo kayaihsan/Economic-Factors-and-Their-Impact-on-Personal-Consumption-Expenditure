@@ -296,3 +296,55 @@ For each country, we analyzed the relationship between Inflation and the followi
 
 > 🔍 **Conclusion:**  
 > These plots provide visual support for our regression findings. In particular, **log-transformed consumption expenditure** appears **consistently and negatively associated** with inflation in both Canada and the US, while property prices are most sensitive to inflation in the UK.
+>
+> ### 7. 📊 Hypothesis Testing Results
+
+To statistically validate our assumptions, we performed **simple linear regression analyses** with **Inflation** as the independent variable and tested the following:
+
+- Whether inflation has a statistically significant effect on each indicator
+- Using a **significance level of 0.05 (α = 0.05)**
+- Decisions are based on p-values:  
+  - If *p < 0.05* → Reject H₀  
+  - If *p ≥ 0.05* → Fail to Reject H₀
+
+#### 🇨🇦 Canada
+
+| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
+|------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
+| Log_Property_Prices          |                  -0.0630 |     4.5315 |     0.1929 |  0.0009 | **Reject H₀**            |
+| Unemployment_Rate            |                  -0.0292 |     7.9709 |     0.0026 |  0.7154 | Fail to Reject H₀        |
+| Log_Consumption_Expenditure  |                  -0.0793 |    12.7505 |     0.3720 |  0.0000 | **Reject H₀**            |
+
+> ✅ **Significant negative effects** found on property prices and consumption expenditure.
+
+---
+
+#### 🇬🇧 UK
+
+| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
+|------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
+| Log_Property_Prices          |                  -0.6261 |     2.7952 |     0.5274 |  0.0002 | **Reject H₀**            |
+| Unemployment_Rate            |                  -0.0779 |     5.9651 |     0.0057 |  0.6976 | Fail to Reject H₀        |
+| Log_Consumption_Expenditure  |                   0.0335 |    12.8848 |     0.0853 |  0.1242 | Fail to Reject H₀        |
+
+> ✅ Only **property prices** are significantly affected by inflation in the UK.
+
+---
+
+#### 🇺🇸 USA
+
+| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
+|------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
+| Log_Property_Prices          |                   0.0283 |     1.3457 |     0.0079 |  0.6169 | Fail to Reject H₀        |
+| Unemployment_Rate            |                   0.0545 |     5.9308 |     0.0080 |  0.5242 | Fail to Reject H₀        |
+| Log_Consumption_Expenditure  |                  -0.0994 |    14.8525 |     0.3587 |  0.0000 | **Reject H₀**            |
+
+> ✅ In the USA, **only consumption expenditure** shows a statistically significant (and negative) relationship with inflation.
+
+---
+
+> 📌 **Summary:**  
+> - Inflation significantly impacts **consumption expenditure** in **Canada and the USA**.  
+> - **Property prices** are most affected in the **UK**.  
+> - **Unemployment rate** is not significantly impacted by inflation in any country.
+
