@@ -265,18 +265,53 @@ Policymakers must thus tailor their interventions to the unique drivers of consu
 
 ### 4. Scatter Plot Analysis (with Log Transformations)
 
-To gain deeper insight into the relationships between variables—especially where large outliers might obscure patterns—we applied a logarithmic transformation to selected indicators. This helped normalize skewed data and clarify trends. Below, we present scatter plots for each country after applying these transformations.
+To further explore the relationships between inflation and other key economic indicators, we created scatter plots for each country. In order to handle skewness and stabilize variance in certain variables (especially property prices and consumption expenditure), logarithmic transformations were applied.
+
 
 #### Canada  
+
+In Canada, the scatter plots reveal two notable patterns:
+
+- **“Inflation vs. Log Consumption Expenditure shows a clear negative trend, supporting the regression and correlation findings. As inflation increases, consumption tends to decline—indicating that inflationary pressure may directly erode purchasing power.”**
+
+- **“Inflation vs. Log Property Prices displays a weaker, somewhat nonlinear negative relationship. While some downward trend exists, data points are more scattered.”**
+
+The **Inflation vs. Unemployment Rate** plot shows no visible trend, confirming its lack of statistical significance in prior analyses.
+
 ![Scatter Plot - Canada](images/scatter_canada.png)  
 
 
 #### UK  
+
+For the UK:
+
+- **“The relationship between Inflation and Log Property Prices is strongly negative and visually apparent. As inflation rises, property prices (adjusted for inflation) fall significantly. This aligns well with the UK's regression result (R² ≈ 0.53).”**
+
+- **“Inflation vs. Log Consumption Expenditure exhibits no clear trend, supporting the regression conclusion that this relationship is not statistically significant.”**
+
+- **“Inflation vs. Unemployment Rate again appears scattered, with no strong linear association visible.”**
+  
 ![Scatter Plot - UK](images/scatter_uk.png)  
 
 
 #### USA  
+In the US:
+
+- **“The Inflation vs. Log Consumption Expenditure scatter plot reveals a distinct downward trend, mirroring the regression output where inflation had a significant negative impact on spending.”**
+
+- **“The relationship between Inflation and Property Prices (log) is weak and lacks direction, consistent with the negligible R² and high p-value observed earlier.”**
+
+- **“As with the other countries, Unemployment Rate does not appear to have a strong visual relationship with inflation.”**
+
 ![Scatter Plot - USA](images/scatter_us.png)  
+
+## 📌 Implication
+
+**Implication:**  
+The scatter plot analysis confirms and visually reinforces earlier statistical findings. Inflation tends to suppress consumption expenditure in both **Canada** and the **United States**, with visible downward trends in both cases.  
+In the UK, inflation appears to most strongly affect **property prices**, suggesting a housing market more sensitive to inflationary forces.
+
+The consistency across different types of analyses (correlation, regression, scatter plots) enhances the **credibility and robustness** of these conclusions, while the visual format helps identify nonlinearities and residual noise in the data.
 
 The log transformation highlights a clear nonlinear association between Property_Prices and Consumption_Expenditure.
 > **Note:** All scatter plots are based on log-transformed values where appropriate (e.g., for Property_Prices and Consumption_Expenditure).
