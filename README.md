@@ -129,26 +129,3 @@ We tested each feature for outliers using the Interquartile Range (IQR) method. 
 > - Inflation in both Canada (9.26 %) and the USA (9.43 %) exceeded our 5 % threshold, so we applied Winsorizing to those distributions.  
 > - All other features had outlier rates below 5 %, so they remained unchanged.
 
-### Correlation Analysis
-
-After cleaning and handling outliers, we examined the pairwise correlations between our key economic indicators for Canada. Below is the heatmap visualization and the corresponding numeric matrix.
-
-#### Heatmap (Canada)  
-![Correlation Matrix (Heatmap) - Canada](outputs/corr_heatmap_canada.png)
-
-#### Canada Correlation Matrix
-
-|                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
-|--------------------------|----------:|------------------:|----------------:|------------------------:|
-| **Inflation**            |      1.00 |             -0.05 |           -0.37 |                   -0.56 |
-| **Unemployment_Rate**    |     -0.05 |              1.00 |           -0.37 |                   -0.31 |
-| **Property_Prices**      |     -0.37 |             -0.37 |            1.00 |                    0.94 |
-| **Consumption_Expenditure** |  -0.56 |             -0.31 |            0.94 |                    1.00 |
-
-> **Key observations:**  
-> - **Property_Prices ↔ Consumption_Expenditure (0.94):** Very strong positive correlation, indicating that rising property prices tend to coincide with higher consumption expenditure.  
-> - **Inflation ↔ Consumption_Expenditure (-0.56):** Moderate negative correlation, suggesting that higher inflation is associated with reduced consumption spending.  
-> - **Inflation ↔ Unemployment_Rate (-0.05):** Near-zero correlation, implying little linear relationship between these two variables in our sample.  
-
-This analysis guided our feature-selection and modeling decisions in subsequent phases.
-
