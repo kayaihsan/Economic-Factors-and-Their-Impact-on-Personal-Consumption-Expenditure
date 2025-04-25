@@ -60,6 +60,28 @@ These datasets cover multiple years, allowing for a robust analysis of long-term
 4. **Machine Learning Models (if applicable):**
    - Train predictive models to forecast personal consumption expenditure based on economic indicators and historical wartime events.
   
+## 📚 Hypothesis
+
+This study aims to examine the impact of **Inflation** on the following key economic indicators:
+
+- 📈 **Property Prices** (log-transformed)  
+- 📉 **Unemployment Rate**  
+- 💳 **Consumption Expenditure** (log-transformed)
+
+By conducting this analysis for **Canada**, **UK**, and **USA**, we aim to uncover whether inflation has a measurable influence on these socio-economic variables.
+
+### 🎯 Hypotheses
+
+- **Null Hypothesis (H₀):** Inflation has **no significant effect** on the selected economic indicators.  
+- **Alternative Hypothesis (H₁):** Inflation has a **significant effect** on at least one of the economic indicators.
+
+We apply **Simple Linear Regression (OLS)** to test these hypotheses and interpret statistical significance using:
+
+- **p-values** (α = 0.05)
+- **R-squared values** for explanatory power
+- **Visual analysis** through scatter and regression plots
+
+> 📌 This hypothesis-driven approach allows us to quantify and visualize the extent to which inflation may influence prices, spending, and employment in different economic contexts.
 
 
 ## Findings
