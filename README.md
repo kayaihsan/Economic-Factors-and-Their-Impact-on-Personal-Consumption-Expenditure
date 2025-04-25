@@ -171,15 +171,15 @@ To gain deeper insight into the relationships between variables—especially whe
 
 #### Canada  
 ![Scatter Plot - Canada](images/scatter_canada.png)  
-The log transformation highlights a clear nonlinear association between Property_Prices and Consumption_Expenditure.
+
 
 #### UK  
 ![Scatter Plot - UK](images/scatter_uk.png)  
-In the UK, the log scale makes the inverse trend between Unemployment_Rate and Consumption_Expenditure more apparent.
+
 
 #### USA  
 ![Scatter Plot - USA](images/scatter_us.png)  
-For the US, log-transformed scatter plots better reveal the moderate negative correlation between Inflation and Consumption_Expenditure.
 
+The log transformation highlights a clear nonlinear association between Property_Prices and Consumption_Expenditure.
 > **Note:** All scatter plots are based on log-transformed values where appropriate (e.g., for Property_Prices and Consumption_Expenditure).
 
