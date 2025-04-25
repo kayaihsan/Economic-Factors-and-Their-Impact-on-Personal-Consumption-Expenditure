@@ -92,7 +92,7 @@ We apply **Simple Linear Regression (OLS)** to test these hypotheses and interpr
 
 ## Findings
 
-### Missing Value Analysis
+### 1. Missing Value Analysis
 
 After loading and consolidating the full dataset, we performed a missing‐value analysis for each country. The results below show that **no** missing values were found in any of the key variables for Canada, the UK, or the USA—hence, no imputation was necessary.
 
@@ -125,7 +125,7 @@ After loading and consolidating the full dataset, we performed a missing‐value
 
 > **Note:** Since there were no missing observations, we proceeded to the next phase without any imputation.
 
-### Outlier Analysis (IQR Method)
+### 2. Outlier Analysis (IQR Method)
 
 We tested each feature for outliers using the Interquartile Range (IQR) method. Whenever a feature’s outlier rate exceeded 5 %, we planned to apply Winsorizing to cap extreme values.
 
