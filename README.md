@@ -118,7 +118,14 @@ We apply **Simple Linear Regression (OLS)** to test these hypotheses and interpr
 
 ### 1. Missing Value Analysis
 
-After loading and consolidating the full dataset, we performed a missing‐value analysis for each country. The results below show that **no** missing values were found in any of the key variables for Canada, the UK, or the USA—hence, no imputation was necessary.
+After consolidating datasets from Canada, the United States, and the United Kingdom, we conducted a missing value analysis to ensure data integrity and consistency.
+
+The analysis revealed no missing observations across all key variables — inflation rates, unemployment rates, real residential property prices, and personal consumption expenditure — for any of the countries.
+
+### Implication
+
+The absence of missing data enhances the reliability of our statistical models and conclusions, as it eliminates the need for imputation or interpolation, both of which can introduce biases. It ensures that subsequent analyses are based entirely on observed, unaltered data, thereby increasing the robustness of our findings.
+
 
 #### Canada
 | Variable                   | Missing Count | Missing Percentage (%) |
