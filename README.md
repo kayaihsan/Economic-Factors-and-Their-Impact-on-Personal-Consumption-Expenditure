@@ -2,7 +2,7 @@
 DSA210_TermProject
 
 ## 📑 Table of Contents
-1. [Introduction](#Introduction)  
+1. [📌 Introduction](#Introduction)  
 2. [Motivation](#Motivation)  
 3. [Project Goal](#Project-Goal)  
 4. [Project Structure](#Project-Structure)  
@@ -17,7 +17,7 @@ DSA210_TermProject
    5. [Regression Analysis](#5-Regression-Analysis:-Impact-of-Inflation-on-Key-Indicators)  
    6. [Visual Regression Relationships](#6-Visualizing-Regression-Relationships)  
    7. [Hypothesis Testing Results](#7-📊-Hypothesis-Testing-Results)  
-9. [Full Notebook](#Full-Notebook)
+
 
 ---
 ## 📌 Introduction
