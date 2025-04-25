@@ -305,7 +305,6 @@ In the US:
 
 ![Scatter Plot - USA](images/scatter_us.png)  
 
-## 📌 Implication
 
 **Implication:**  
 The scatter plot analysis confirms and visually reinforces earlier statistical findings. Inflation tends to suppress consumption expenditure in both **Canada** and the **United States**, with visible downward trends in both cases.  
