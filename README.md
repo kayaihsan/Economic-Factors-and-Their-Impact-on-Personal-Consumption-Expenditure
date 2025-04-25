@@ -97,4 +97,35 @@ After loading and consolidating the full dataset, we performed a missing‐value
 
 > **Note:** Since there were no missing observations, we proceeded to the next phase without any imputation.
 
+### Outlier Analysis (IQR Method)
+
+We tested each feature for outliers using the Interquartile Range (IQR) method. Whenever a feature’s outlier rate exceeded 5 %, we planned to apply Winsorizing to cap extreme values.
+
+#### Canada
+| Feature                   | Outlier Count | Outlier Percentage (%) |
+|---------------------------|--------------:|-----------------------:|
+| Property_Prices           |             2 |                   3.70 |
+| Unemployment_Rate         |             1 |                   1.85 |
+| Inflation                 |             5 |                   9.26 |
+| Consumption_Expenditure   |             0 |                   0.00 |
+
+#### UK
+| Feature                   | Outlier Count | Outlier Percentage (%) |
+|---------------------------|--------------:|-----------------------:|
+| Property_Prices           |             1 |                   3.45 |
+| Unemployment_Rate         |             0 |                   0.00 |
+| Inflation                 |             2 |                   6.90 |
+| Consumption_Expenditure   |             0 |                   0.00 |
+
+#### USA
+| Feature                   | Outlier Count | Outlier Percentage (%) |
+|---------------------------|--------------:|-----------------------:|
+| Property_Prices           |             1 |                   1.89 |
+| Unemployment_Rate         |             0 |                   0.00 |
+| Inflation                 |             5 |                   9.43 |
+| Consumption_Expenditure   |             0 |                   0.00 |
+
+> **Note:**  
+> - Inflation in both Canada (9.26 %) and the USA (9.43 %) exceeded our 5 % threshold, so we applied Winsorizing to those distributions.  
+> - All other features had outlier rates below 5 %, so they remained unchanged.
 
