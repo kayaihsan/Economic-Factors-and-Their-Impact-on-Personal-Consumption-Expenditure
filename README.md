@@ -65,7 +65,7 @@ Ultimately, this project seeks to bridge raw economic data with intuitive visual
 | 11 | Real Residential Property Prices | US | [Link](https://fred.stlouisfed.org/series/QUSR368BIS) | 1970-2024 |
 | 12 | Real Residential Property Prices | UK | [Link](https://fred.stlouisfed.org/series/QGBR368BIS) | 1969-2024 |
 
-These datasets cover multiple years, allowing for a robust analysis of long-term trends and short-term fluctuations in economic indicators, particularly during wartime periods.
+These datasets cover multiple years, allowing for a robust analysis of long-term trends and short-term fluctuations in economic indicators.
 
 # Methodology
 1. **Data Cleaning & Preprocessing:**
@@ -79,7 +79,7 @@ These datasets cover multiple years, allowing for a robust analysis of long-term
    - Perform seasonal decomposition to detect periodic patterns.
    - Assess the economic impact of  inflation on employment, and consumption trends.
 4. **Machine Learning Models (if applicable):**
-   - Train predictive models to forecast personal consumption expenditure based on economic indicators and historical wartime events.
+   - Train predictive models to forecast personal consumption expenditure based on economic indicators.
   
 ## 📚 Hypothesis
 
