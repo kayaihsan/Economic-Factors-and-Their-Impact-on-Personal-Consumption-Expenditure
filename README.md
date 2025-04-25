@@ -240,3 +240,37 @@ We conducted these regressions separately for Canada, the UK, and the USA. The r
 > Across all three countries, **Log_Consumption_Expenditure** appears to be most consistently and negatively influenced by inflation. In contrast, the relationship between inflation and **Unemployment_Rate** remains weak and statistically insignificant throughout.
 
 
+### 6. Visualizing Regression Relationships
+
+To further understand how **Inflation** impacts key economic indicators, we created regression scatter plots using a custom plotting function. These visualizations include regression lines to highlight linear trends.
+
+For each country, we analyzed the relationship between Inflation and the following:
+- **Log_Property_Prices**
+- **Unemployment_Rate**
+- **Log_Consumption_Expenditure**
+
+#### Canada  
+![Regression - Canada](images/relationship_canada.png)  
+> - A **clear negative trend** is visible between Inflation and both **Property Prices (log)** and **Consumption Expenditure (log)**.  
+> - This supports the regression summary, where both relationships were statistically significant.  
+> - **Unemployment Rate** shows no visible trend, consistent with its high p-value.
+
+---
+
+#### UK  
+![Regression - UK](images/relationship_uk.png)  
+> - The negative linear relationship between Inflation and **Property Prices (log)** is visually strong, matching the high R² from the regression.  
+> - Again, **Unemployment Rate** appears flat and scattered.  
+> - A **slight positive trend** is observed between Inflation and **Consumption Expenditure (log)**, though it's not statistically significant.
+
+---
+
+#### USA  
+![Regression - USA](images/relationship_us.png)  
+> - The **strongest visual relationship** is observed between Inflation and **Consumption Expenditure (log)** — consistent with the regression result (p < 0.001, R² = 0.36).  
+> - Other relationships appear **weak or random**, with scattered points and near-flat regression lines.
+
+---
+
+> 🔍 **Conclusion:**  
+> These plots provide visual support for our regression findings. In particular, **log-transformed consumption expenditure** appears **consistently and negatively associated** with inflation in both Canada and the US, while property prices are most sensitive to inflation in the UK.
