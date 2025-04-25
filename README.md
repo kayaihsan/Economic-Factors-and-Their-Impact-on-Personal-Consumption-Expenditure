@@ -129,3 +129,38 @@ We tested each feature for outliers using the Interquartile Range (IQR) method. 
 > - Inflation in both Canada (9.26 %) and the USA (9.43 %) exceeded our 5 % threshold, so we applied Winsorizing to those distributions.  
 > - All other features had outlier rates below 5 %, so they remained unchanged.
 
+### 3. Correlation Analysis
+
+We computed pairwise Pearson correlations to understand relationships among our indicators. A heatmap and numeric matrices for each country are shown below.
+
+#### Canada  
+![Heatmap - Canada](outputs/corr_heatmap_canada.png)  
+|                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
+|--------------------------|----------:|------------------:|----------------:|------------------------:|
+| **Inflation**            |      1.00 |             -0.05 |           -0.37 |                   -0.56 |
+| **Unemployment_Rate**    |     -0.05 |              1.00 |           -0.37 |                   -0.31 |
+| **Property_Prices**      |     -0.37 |             -0.37 |            1.00 |                    0.94 |
+| **Consumption_Expenditure** |  -0.56 |             -0.31 |            0.94 |                    1.00 |
+
+#### UK  
+![Heatmap - UK](outputs/corr_heatmap_uk.png)  
+|                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
+|--------------------------|----------:|------------------:|----------------:|------------------------:|
+| **Inflation**            |      1.00 |             -0.08 |           -0.54 |                    0.33 |
+| **Unemployment_Rate**    |     -0.08 |              1.00 |           -0.28 |                   -0.57 |
+| **Property_Prices**      |     -0.54 |             -0.28 |            1.00 |                   -0.35 |
+| **Consumption_Expenditure** |  0.33  |             -0.57 |           -0.35 |                    1.00 |
+
+#### USA  
+![Heatmap - USA](outputs/corr_heatmap_usa.png)  
+|                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
+|--------------------------|----------:|------------------:|----------------:|------------------------:|
+| **Inflation**            |      1.00 |              0.09 |           -0.10 |                   -0.53 |
+| **Unemployment_Rate**    |      0.09 |              1.00 |           -0.34 |                   -0.34 |
+| **Property_Prices**      |     -0.10 |             -0.34 |            1.00 |                    0.08 |
+| **Consumption_Expenditure** |  -0.53 |             -0.34 |            0.08 |                    1.00 |
+
+> **Key takeaways:**  
+> - **Canada:** Property_Prices & Consumption_Expenditure very strongly correlated (0.94).  
+> - **UK:** Unemployment_Rate shows moderate negative link with Consumption_Expenditure (-0.57).  
+> - **USA:** Inflation & Consumption_Expenditure moderately negative (-0.53).
