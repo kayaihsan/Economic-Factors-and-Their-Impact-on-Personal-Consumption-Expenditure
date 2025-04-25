@@ -158,7 +158,18 @@ The absence of missing data enhances the reliability of our statistical models a
 
 ### 2. Outlier Analysis (IQR Method)
 
-We tested each feature for outliers using the Interquartile Range (IQR) method. Whenever a feature’s outlier rate exceeded 5 %, we planned to apply Winsorizing to cap extreme values.
+To ensure the validity of our statistical analyses, we conducted an outlier detection procedure using the Interquartile Range (IQR) method across all key indicators for each country.
+
+The findings were as follows:
+
+- In Canada and the United States, inflation exhibited an outlier rate exceeding 5% of the observations.
+- For all other variables — including unemployment rates, property prices, and personal consumption expenditures — the percentage of outliers remained below the 5% threshold.
+
+As a result, Winsorizing was applied to the inflation distributions for Canada and the USA. Winsorization involves capping extreme values to specified percentile limits, thereby reducing the influence of outliers without discarding data points entirely.
+
+### Rationale
+
+Outliers, particularly in inflation data, can severely distort regression estimates and correlation coefficients. By applying Winsorization, we aimed to preserve the structure of the data while mitigating the impact of abnormal observations that could bias our results.
 
 #### Canada
 | Feature                   | Outlier Count | Outlier Percentage (%) |
@@ -184,9 +195,10 @@ We tested each feature for outliers using the Interquartile Range (IQR) method. 
 | Inflation                 |             5 |                   9.43 |
 | Consumption_Expenditure   |             0 |                   0.00 |
 
-> **Note:**  
-> - Inflation in both Canada (9.26 %) and the USA (9.43 %) exceeded our 5 % threshold, so we applied Winsorizing to those distributions.  
-> - All other features had outlier rates below 5 %, so they remained unchanged.
+### Implication
+
+The adjustments ensure that subsequent analyses (correlations, regressions) are more robust, stable, and reflective of underlying economic relationships rather than being skewed by extreme anomalies.
+
 
 ### 3. Correlation Analysis
 
