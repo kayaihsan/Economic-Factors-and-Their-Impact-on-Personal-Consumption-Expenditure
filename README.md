@@ -43,24 +43,20 @@ The central objective of this project is to establish empirical relationships be
 | 10 | Real Residential Property Prices | Canada | [Link](https://fred.stlouisfed.org/series/QCAR628BIS) | 1970-2024 |
 | 11 | Real Residential Property Prices | US | [Link](https://fred.stlouisfed.org/series/QUSR368BIS) | 1970-2024 |
 | 12 | Real Residential Property Prices | UK | [Link](https://fred.stlouisfed.org/series/QGBR368BIS) | 1969-2024 |
-| 13 | Historical Wartime Events | Canada | [Link](https://en.wikipedia.org/wiki/List_of_wars_involving_Canada) | Various |
-| 14 | Historical Wartime Events | US | [Link](https://en.wikipedia.org/wiki/List_of_wars_involving_the_United_States) | Various |
-| 15 | Historical Wartime Events | UK | [Link](https://en.wikipedia.org/wiki/Military_history_of_the_United_Kingdom) | Various |
 
 These datasets cover multiple years, allowing for a robust analysis of long-term trends and short-term fluctuations in economic indicators, particularly during wartime periods.
 
 # Methodology
 1. **Data Cleaning & Preprocessing:**
    - Handle missing values and ensure consistency across datasets.
-   - Convert all data to a common time format (quarterly basis).
+   - Convert all data to a common time format.
 2. **Exploratory Data Analysis (EDA):**
-   - Compute summary statistics and visualize trends in the data.
+   - Compute summary statistics and visualize data.
    - Identify potential correlations between variables.
 3. **Statistical Analysis & Hypothesis Testing:**
    - Conduct regression analysis to quantify relationships.
    - Perform seasonal decomposition to detect periodic patterns.
-   - Analyze the correlation between real residential property prices and personal consumption expenditure.
-   - Assess the economic impact of wartime periods on inflation, employment, and consumption trends.
+   - Assess the economic impact of  inflation on employment, and consumption trends.
 4. **Machine Learning Models (if applicable):**
    - Train predictive models to forecast personal consumption expenditure based on economic indicators and historical wartime events.
 
