@@ -1,6 +1,25 @@
 # Economic Factors & Consumption
 DSA210_TermProject
 
+## 📑 Table of Contents
+1. [Introduction](#Introduction)  
+2. [Motivation](#Motivation)  
+3. [Project Goal](#Project-Goal)  
+4. [Project Structure](#Project-Structure)  
+5. [Data Sources](#Data-Sources)  
+6. [Methodology](#Methodology)  
+7. [Hypothesis](#Hypothesis)  
+8. [Findings](#Findings)  
+   1. [Missing Value Analysis](#1-Missing-Value-Analysis)  
+   2. [Outlier Analysis](#2-Outlier-Analysis-(IQR-Method))  
+   3. [Correlation Analysis](#3-Correlation-Analysis)  
+   4. [Scatter Plot Analysis](#4-Scatter-Plot-Analysis-(with-Log-Transformations))  
+   5. [Regression Analysis](#5-Regression-Analysis:-Impact-of-Inflation-on-Key-Indicators)  
+   6. [Visual Regression Relationships](#6-Visualizing-Regression-Relationships)  
+   7. [Hypothesis Testing Results](#7-📊-Hypothesis-Testing-Results)  
+9. [Full Notebook](#Full-Notebook)
+
+---
 ## 📌 Introduction
 
 This project explores the relationship between key macroeconomic indicators **inflation**, **unemployment rates**, and **inflation-adjusted property prices** and **personal consumption expenditure (PCE)**. The goal is to determine the extent to which these variables influence consumer spending habits over time and whether they display consistent patterns across different economies.
