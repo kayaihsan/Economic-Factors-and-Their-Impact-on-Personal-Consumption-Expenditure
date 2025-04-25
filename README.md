@@ -59,4 +59,42 @@ These datasets cover multiple years, allowing for a robust analysis of long-term
    - Assess the economic impact of  inflation on employment, and consumption trends.
 4. **Machine Learning Models (if applicable):**
    - Train predictive models to forecast personal consumption expenditure based on economic indicators and historical wartime events.
+  
+
+
+## Findings
+
+### Missing Value Analysis
+
+After loading and consolidating the full dataset, we performed a missing‐value analysis for each country. The results below show that **no** missing values were found in any of the key variables for Canada, the UK, or the USA—hence, no imputation was necessary.
+
+#### Canada
+| Variable                   | Missing Count | Missing Percentage (%) |
+|----------------------------|--------------:|-----------------------:|
+| Year                       |             0 |                    0.0 |
+| Property_Prices            |             0 |                    0.0 |
+| Unemployment_Rate          |             0 |                    0.0 |
+| Inflation                  |             0 |                    0.0 |
+| Consumption_Expenditure    |             0 |                    0.0 |
+
+#### UK
+| Variable                   | Missing Count | Missing Percentage (%) |
+|----------------------------|--------------:|-----------------------:|
+| Year                       |             0 |                    0.0 |
+| Property_Prices            |             0 |                    0.0 |
+| Unemployment_Rate          |             0 |                    0.0 |
+| Inflation                  |             0 |                    0.0 |
+| Consumption_Expenditure    |             0 |                    0.0 |
+
+#### USA
+| Variable                   | Missing Count | Missing Percentage (%) |
+|----------------------------|--------------:|-----------------------:|
+| Year                       |             0 |                    0.0 |
+| Property_Prices            |             0 |                    0.0 |
+| Unemployment_Rate          |             0 |                    0.0 |
+| Inflation                  |             0 |                    0.0 |
+| Consumption_Expenditure    |             0 |                    0.0 |
+
+> **Note:** Since there were no missing observations, we proceeded to the next phase without any imputation.
+
 
