@@ -90,7 +90,7 @@ These datasets cover multiple years, allowing for a robust analysis of long-term
 4. **Machine Learning Models (if applicable):**
    - Train predictive models to forecast personal consumption expenditure based on economic indicators.
   
-## 📚 Hypothesis
+## Hypothesis
 
 This study aims to examine the impact of **Inflation** on the following key economic indicators:
 
