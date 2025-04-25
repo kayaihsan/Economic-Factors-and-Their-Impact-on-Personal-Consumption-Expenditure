@@ -18,7 +18,7 @@ DSA210_TermProject
    6. [Visualizing Regression Relationships](#visualizing-regression-relationships)  
    7. [Hypothesis Testing Results](#hypothesis-testing-results)  
 
-## 📌 Introduction
+## Introduction
 
 This project explores the relationship between key macroeconomic indicators **inflation**, **unemployment rates**, and **inflation-adjusted property prices** and **personal consumption expenditure (PCE)**. The goal is to determine the extent to which these variables influence consumer spending habits over time and whether they display consistent patterns across different economies.
 
@@ -29,7 +29,7 @@ By analyzing these dynamics in **Canada**, the **United States**, and the **Unit
 > 📊 Through a combination of correlation analysis, regression modeling, and visualization, we aim to draw meaningful conclusions about inflation’s role in shaping economic outcomes.
 
 
-## 🚀 Motivation
+## Motivation
 
 Macroeconomic conditions—such as inflation, unemployment, and housing market dynamics—directly influence individuals' purchasing power and spending behavior. Understanding these relationships is essential for policymakers, economists, businesses, and consumers seeking to anticipate economic shifts and adapt accordingly.
 
@@ -46,7 +46,7 @@ By addressing these questions, the study aims to:
 
 
 
-## 🎯 Project Goal
+## Project Goal
 
 The primary goal of this project is to **analyze the impact of inflation** on key economic indicators such as:
 
