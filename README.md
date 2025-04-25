@@ -183,3 +183,60 @@ To gain deeper insight into the relationships between variables—especially whe
 The log transformation highlights a clear nonlinear association between Property_Prices and Consumption_Expenditure.
 > **Note:** All scatter plots are based on log-transformed values where appropriate (e.g., for Property_Prices and Consumption_Expenditure).
 
+
+### 5. Regression Analysis: Impact of Inflation on Key Indicators
+
+To explore how inflation influences other socio-economic indicators, we performed simple linear regressions with **Inflation** as the independent variable and three dependent variables:
+
+- **Log_Property_Prices**
+- **Unemployment_Rate**
+- **Log_Consumption_Expenditure**
+
+We conducted these regressions separately for Canada, the UK, and the USA. The results are summarized below.
+
+---
+
+#### **Canada**
+| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value (Inflation) |
+|------------------------------|-------------------------:|----------:|----------:|---------------------:|
+| Log_Property_Prices          |                  -0.0630 |     4.5315 |     0.1929 |              0.0009  |
+| Unemployment_Rate            |                  -0.0292 |     7.9709 |     0.0026 |              0.7154  |
+| Log_Consumption_Expenditure  |                  -0.0793 |    12.7505 |     0.3720 |              0.0000  |
+
+> **Insights:**  
+> - Inflation is **significantly negatively associated** with **Log_Property_Prices** and **Log_Consumption_Expenditure**, suggesting that as inflation rises, both metrics tend to decrease.
+> - The **R-squared** for consumption expenditure is relatively strong (0.37), indicating a better model fit.
+> - There is **no significant relationship** between inflation and unemployment in Canada (p = 0.7154).
+
+---
+
+#### **UK**
+| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value (Inflation) |
+|------------------------------|-------------------------:|----------:|----------:|---------------------:|
+| Log_Property_Prices          |                  -0.6261 |     2.7952 |     0.5274 |              0.0002  |
+| Unemployment_Rate            |                  -0.0779 |     5.9651 |     0.0057 |              0.6976  |
+| Log_Consumption_Expenditure  |                   0.0335 |    12.8848 |     0.0853 |              0.1242  |
+
+> **Insights:**  
+> - A **strong negative relationship** is found between inflation and **Log_Property_Prices** in the UK, with over 50% of the variation explained (R² = 0.53).
+> - No statistically significant effect of inflation is observed on unemployment or consumption expenditure.
+
+---
+
+#### **USA**
+| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value (Inflation) |
+|------------------------------|-------------------------:|----------:|----------:|---------------------:|
+| Log_Property_Prices          |                   0.0283 |     1.3457 |     0.0079 |              0.6169  |
+| Unemployment_Rate            |                   0.0545 |     5.9308 |     0.0080 |              0.5242  |
+| Log_Consumption_Expenditure  |                  -0.0994 |    14.8525 |     0.3587 |              0.0000  |
+
+> **Insights:**  
+> - Inflation shows a **significant negative impact** on **Log_Consumption_Expenditure** in the USA.
+> - However, no meaningful linear relationship is observed with unemployment or property prices (p-values > 0.5, very low R² values).
+
+---
+
+> 💡 **Overall Observation:**  
+> Across all three countries, **Log_Consumption_Expenditure** appears to be most consistently and negatively influenced by inflation. In contrast, the relationship between inflation and **Unemployment_Rate** remains weak and statistically insignificant throughout.
+
+
