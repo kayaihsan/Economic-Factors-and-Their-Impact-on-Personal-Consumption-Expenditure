@@ -143,7 +143,7 @@ We computed pairwise Pearson correlations to understand relationships among our 
 | **Consumption_Expenditure** |  -0.56 |             -0.31 |            0.94 |                    1.00 |
 
 #### UK  
-![Heatmap - UK](uk_heatmap.png)  
+![Heatmap - UK](images/uk_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
 | **Inflation**            |      1.00 |             -0.08 |           -0.54 |                    0.33 |
@@ -152,7 +152,7 @@ We computed pairwise Pearson correlations to understand relationships among our 
 | **Consumption_Expenditure** |  0.33  |             -0.57 |           -0.35 |                    1.00 |
 
 #### USA  
-![Heatmap - USA](usa_heatmap.png)  
+![Heatmap - USA](images/usa_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
 | **Inflation**            |      1.00 |              0.09 |           -0.10 |                   -0.53 |
