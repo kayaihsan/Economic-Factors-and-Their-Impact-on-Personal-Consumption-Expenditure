@@ -1,10 +1,16 @@
 # Economic Factors & Consumption
 DSA210_TermProject
 
-# Introduction
-This project explores the relationship between key economic factors such as unemployment rates, inflation, inflation-adjusted housing prices, and historical wartime periods with personal consumption expenditure. Our goal is to determine the extent to which these macroeconomic indicators influence consumer spending habits over time and whether they exhibit seasonal patterns. The study focuses on three major economies: Canada, the United States, and the United Kingdom.
+## 📌 Introduction
 
-Personal consumption expenditure (PCE) is a vital economic indicator, reflecting the overall economic health of a country. Fluctuations in PCE often correlate with economic downturns, periods of inflation, labor market shifts, and major historical events such as wars. By analyzing these factors across different countries and economic conditions, this study aims to provide deeper insights into consumer behavior, macroeconomic trends, and the economic impact of wartime periods.
+This project explores the relationship between key macroeconomic indicators—**inflation**, **unemployment rates**, and **inflation-adjusted property prices**—and **personal consumption expenditure (PCE)**. The goal is to determine the extent to which these variables influence consumer spending habits over time and whether they display consistent patterns across different economies.
+
+**Personal Consumption Expenditure (PCE)** is a critical measure of economic activity, often used to assess the health of a nation's economy. Fluctuations in PCE can signal inflationary pressures, labor market shifts, or changes in household financial behavior.
+
+By analyzing these dynamics in **Canada**, the **United States**, and the **United Kingdom**, this study aims to uncover cross-country differences and similarities in how macroeconomic conditions affect consumer behavior.
+
+> 📊 Through a combination of correlation analysis, regression modeling, and visualization, we aim to draw meaningful conclusions about inflation’s role in shaping economic outcomes.
+
 
 # Motivation
 Macroeconomic conditions significantly impact individuals' purchasing power and spending behavior. Understanding these relationships is crucial for policymakers, economists, businesses, and consumers alike. The research aims to address several critical questions:
