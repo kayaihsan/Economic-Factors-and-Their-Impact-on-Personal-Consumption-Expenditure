@@ -202,9 +202,17 @@ The adjustments ensure that subsequent analyses (correlations, regressions) are 
 
 ### 3. Correlation Analysis
 
-We computed pairwise Pearson correlations to understand relationships among our indicators. A heatmap and numeric matrices for each country are shown below.
+To explore the interrelationships between key macroeconomic indicators, we computed the Pearson correlation coefficients for inflation, unemployment rate, real property prices, and consumption expenditure across Canada, the United Kingdom, and the United States.
+
+The resulting correlation matrices reveal how strongly (and in which direction) these economic variables are related to one another. Visualized through heatmaps, these relationships offer valuable insights into the economic structures and consumer behaviors of each country.
 
 #### Canada  
+
+In Canada, the correlation analysis highlights a very strong positive relationship between real property prices and consumption expenditure (r = 0.94).
+Additionally, a moderate negative correlation is observed between inflation and consumption expenditure (r = -0.56).
+
+These findings suggest that Canadian consumer spending patterns are highly sensitive to changes in real estate markets, potentially due to wealth effects whereby rising property values boost household confidence and expenditures. In contrast, inflationary pressures tend to suppress consumption, though the effect is less dominant compared to property prices.
+
 ![Heatmap - Canada](images/canada_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
@@ -214,6 +222,11 @@ We computed pairwise Pearson correlations to understand relationships among our 
 | **Consumption_Expenditure** |  -0.56 |             -0.31 |            0.94 |                    1.00 |
 
 #### UK  
+
+In the United Kingdom, inflation exhibits a moderate negative correlation with property prices (r = -0.54) and a weaker positive correlation with consumption expenditure (r = 0.33).
+
+Interestingly, the unemployment rate shows a moderate negative correlation with consumption expenditure (r = -0.57), implying that rising unemployment directly dampens consumer spending. This pattern points to the critical role of labor market stability in sustaining household consumption within the UK economy.
+
 ![Heatmap - UK](images/uk_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
@@ -223,6 +236,11 @@ We computed pairwise Pearson correlations to understand relationships among our 
 | **Consumption_Expenditure** |  0.33  |             -0.57 |           -0.35 |                    1.00 |
 
 #### USA  
+
+In the United States, the most notable finding is a moderate negative correlation between inflation and consumption expenditure (r = -0.53).
+
+Unlike Canada and the UK, real property prices in the US show only a weak correlation with consumption (r = 0.08), suggesting that real estate fluctuations are less tied to consumer behavior compared to other factors. Instead, inflationary pressures seem to play a more prominent role in shaping household spending dynamics
+
 ![Heatmap - USA](images/usa_heatmap.png)  
 |                          | Inflation | Unemployment_Rate | Property_Prices | Consumption_Expenditure |
 |--------------------------|----------:|------------------:|----------------:|------------------------:|
@@ -230,6 +248,15 @@ We computed pairwise Pearson correlations to understand relationships among our 
 | **Unemployment_Rate**    |      0.09 |              1.00 |           -0.34 |                   -0.34 |
 | **Property_Prices**      |     -0.10 |             -0.34 |            1.00 |                    0.08 |
 | **Consumption_Expenditure** |  -0.53 |             -0.34 |            0.08 |                    1.00 |
+
+### Implication
+
+The correlation patterns across countries reveal that while inflation consistently exhibits a suppressive effect on consumer expenditure, the strength and mediating factors vary by country.
+
+In Canada, the real estate market is a dominant driver of consumption behavior. In the UK, labor market conditions are more influential. In the US, direct inflationary pressure appears to be the most critical factor affecting household spending.
+
+These differences underscore the importance of country-specific economic structures in mediating the relationship between macroeconomic variables and consumer behavior.
+Policymakers must thus tailor their interventions to the unique drivers of consumption within their respective economies.
 
 > **Key takeaways:**  
 > - **Canada:** Property_Prices & Consumption_Expenditure very strongly correlated (0.94).  
