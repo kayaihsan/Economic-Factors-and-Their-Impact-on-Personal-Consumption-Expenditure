@@ -491,7 +491,7 @@ Separate models were trained for **Canada**, **United Kingdom**, and **United St
 
 #### Canada
 
-![Canada ML](images/ml_canada.png)
+![Canada ML](images/MLcanada.png)
 
 - Predicted values closely align with actual ones.
 - The model shows **excellent performance**, indicating that PCE in Canada is highly explainable by inflation, unemployment, and housing prices.
@@ -501,7 +501,7 @@ Separate models were trained for **Canada**, **United Kingdom**, and **United St
 
 #### United Kingdom
 
-![UK ML](images/ml_uk.png)
+![UK ML](images/MLuk.png)
 
 - The UK model shows **moderate fit**.
 - While the general direction is captured, there's more spread around the ideal line.
@@ -511,7 +511,7 @@ Separate models were trained for **Canada**, **United Kingdom**, and **United St
 
 #### United States
 
-![USA ML](images/ml_usa.png)
+![USA ML](images/MLusa.png)
 
 - The model has a **weaker fit**, especially at higher consumption levels.
 - The red line overestimates low PCE and underestimates high PCE, indicating **nonlinearity or unobserved variables**.
