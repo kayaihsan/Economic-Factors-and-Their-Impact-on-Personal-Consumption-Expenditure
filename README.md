@@ -8,7 +8,8 @@ DSA210_TermProject
 4. [Data Sources](#data-sources)
 5. [Methodology](#methodology)
 6. [Hypothesis](#hypothesis)
-7. [Findings](#findings)   
+7. [Findings](#findings)
+8. [Machine Learning Analysis](#machine-learning-analysis)
 
 ## Introduction
 
@@ -466,6 +467,76 @@ A hypothesis was **rejected** if the p-value was less than 0.05.
 > This indicates that American households may react more immediately to price volatility, possibly due to lower saving rates or higher debt sensitivity.
 
 ---
+## 8. Machine Learning Analysis
+
+To better understand how macroeconomic variables influence Personal Consumption Expenditure (PCE), we built a **Multiple Linear Regression** model. The model predicts PCE using the following economic indicators:
+
+- 📈 Inflation
+- 💼 Unemployment Rate
+- 🏠 Real Residential Property Prices
+
+Separate models were trained for **Canada**, **United Kingdom**, and **United States**.
+
+---
+
+### Modeling Approach
+
+- The model was trained with an 80-20 train-test split to evaluate performance.
+- However, for visualization, **the full dataset was used**, providing more comprehensive plots with denser data points.
+- This hybrid approach improves both evaluation accuracy and plot interpretability.
+
+---
+
+### Model Results: Actual vs. Predicted PCE (Full Data)
+
+#### Canada
+
+![Canada ML](images/ml_canada.png)
+
+- Predicted values closely align with actual ones.
+- The model shows **excellent performance**, indicating that PCE in Canada is highly explainable by inflation, unemployment, and housing prices.
+- This suggests a strong relationship between macroeconomic factors and consumer behavior in Canada.
+
+---
+
+#### United Kingdom
+
+![UK ML](images/ml_uk.png)
+
+- The UK model shows **moderate fit**.
+- While the general direction is captured, there's more spread around the ideal line.
+- This may suggest the presence of **additional factors** influencing UK consumption, such as credit policies, government subsidies, or behavioral economics dynamics.
+
+---
+
+#### United States
+
+![USA ML](images/ml_usa.png)
+
+- The model has a **weaker fit**, especially at higher consumption levels.
+- The red line overestimates low PCE and underestimates high PCE, indicating **nonlinearity or unobserved variables**.
+- More advanced models may be necessary for the US (e.g., nonlinear regressors, regularization, or ensemble methods).
+
+---
+
+### Summary of Insights
+
+| Country | Model Fit | Interpretation |
+|---------|-----------|----------------|
+| **Canada** | Excellent (R² ≈ 0.95) | PCE is strongly explained by the selected variables. |
+| **UK** | Moderate | Inflation and unemployment partially explain PCE. |
+| **USA** | Weak | A linear model may not be sufficient to capture consumption behavior. |
+
+---
+
+### Why It Matters
+
+These models show that the relationship between macroeconomic indicators and personal consumption is **not uniform across countries**. While Canada's economic behavior is well-captured using basic indicators, the UK and USA may require more complex models to account for behavioral or institutional differences.
+
+---
+
+>  _Note: All regression plots were generated using full datasets for visualization purposes, while model performance metrics were calculated on test sets._
+
 ## 📌 Summary: 
 Across the three countries, we observe **heterogeneous impacts** of inflation:
 - In **Canada**, both the housing market and consumption are sensitive to inflation.  
