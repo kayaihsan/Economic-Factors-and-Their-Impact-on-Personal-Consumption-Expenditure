@@ -41,13 +41,7 @@ By addressing these questions, the study aims to:
 
 ## Project Goal
 
-The primary goal of this project is to **analyze the impact of inflation** on key economic indicators such as:
-
-- Property Prices (log-transformed)
-- Unemployment Rate
-- Consumption Expenditure (log-transformed)
-
-across three major economies: **Canada**, **United Kingdom**, and **United States**.
+The primary goal is to analyze how key economic indicators — inflation, unemployment, and property prices — affect personal consumption expenditure (PCE) across three major economies: **Canada**, **United Kingdom**, and **United States**.
 
 Through correlation analysis, regression modeling, and visual exploration, we aim to:
 
@@ -103,17 +97,14 @@ By conducting this analysis for **Canada**, **UK**, and **USA**, we aim to uncov
 
 ### 🎯 Hypotheses
 
-- **Null Hypothesis (H₀):** Inflation has **no significant effect** on the selected economic indicators.  
-- **Alternative Hypothesis (H₁):** Inflation has a **significant effect** on at least one of the economic indicators.
+- **Null Hypothesis (H₀):** Economic indicators (inflation, unemployment, property prices) have **no significant effect** on Personal Consumption Expenditure (PCE).  
+- **Alternative Hypothesis (H₁):** At least one economic indicator has a **significant effect** on PCE.
 
 We apply **Simple Linear Regression (OLS)** to test these hypotheses and interpret statistical significance using:
 
 - **p-values** (α = 0.05)
 - **R-squared values** for explanatory power
 - **Visual analysis** through scatter and regression plots
-
-> 📌 This hypothesis-driven approach allows us to quantify and visualize the extent to which inflation may influence prices, spending, and employment in different economic contexts.
-
 
 ## Findings
 
@@ -264,209 +255,228 @@ Policymakers must thus tailor their interventions to the unique drivers of consu
 > - **UK:** Unemployment_Rate shows moderate negative link with Consumption_Expenditure (-0.57).  
 > - **USA:** Inflation & Consumption_Expenditure moderately negative (-0.53).
 
-### 4. Scatter Plot Analysis (with Log Transformations)
+## 4. Scatter Plot Analysis (with Log Transformations)
 
-To further explore the relationships between inflation and other key economic indicators, we created scatter plots for each country. In order to handle skewness and stabilize variance in certain variables (especially property prices and consumption expenditure), logarithmic transformations were applied.
+To better understand how key economic indicators influence **personal consumption expenditure (PCE)**, we visualized their pairwise relationships using scatter plots for each country.  
+Since **property prices** and **consumption expenditure** tend to exhibit skewed distributions, **logarithmic transformations** were applied to stabilize variance and improve interpretability.
 
+### Plot Design
 
-#### Canada  
+Each set of plots below shows how the following indicators:
 
-In Canada, the scatter plots reveal two notable patterns:
+- **Inflation**
+- **Unemployment Rate**
+- **Property Prices (log)**
 
-- **“Inflation vs. Log Consumption Expenditure shows a clear negative trend, supporting the regression and correlation findings. As inflation increases, consumption tends to decline—indicating that inflationary pressure may directly erode purchasing power.”**
+relate to **log-transformed PCE**, the primary dependent variable in this study.
 
-- **“Inflation vs. Log Property Prices displays a weaker, somewhat nonlinear negative relationship. While some downward trend exists, data points are more scattered.”**
+---
 
-The **Inflation vs. Unemployment Rate** plot shows no visible trend, confirming its lack of statistical significance in prior analyses.
+### Canada
 
-![Scatter Plot - Canada](images/scatter_canada.png)  
+- **Inflation vs. Log Consumption Expenditure** shows a **clear negative trend**, supporting the regression and hypothesis testing results. Rising inflation appears to suppress consumer spending, suggesting a potential erosion of purchasing power.
 
+- **Unemployment Rate vs. Log PCE** appears scattered, consistent with the variable’s **insignificance** in the statistical tests.
 
-#### UK  
+- **Log Property Prices vs. Log PCE** reveals a **strong positive correlation**. As real estate values rise, consumer expenditure also tends to increase—possibly reflecting broader economic confidence.
 
-For the UK:
+![Canada - Economic Indicators vs PCE](images/scatter_canada.png)
 
-- **“The relationship between Inflation and Log Property Prices is strongly negative and visually apparent. As inflation rises, property prices (adjusted for inflation) fall significantly. This aligns well with the UK's regression result (R² ≈ 0.53).”**
+---
 
-- **“Inflation vs. Log Consumption Expenditure exhibits no clear trend, supporting the regression conclusion that this relationship is not statistically significant.”**
+### United Kingdom
 
-- **“Inflation vs. Unemployment Rate again appears scattered, with no strong linear association visible.”**
-  
-![Scatter Plot - UK](images/scatter_uk.png)  
+- **Inflation vs. Log PCE** shows no strong trend, supporting the regression finding that inflation's impact on consumption is statistically insignificant in the UK.
 
+- **Unemployment Rate vs. Log PCE** is again visually scattered, with no linear pattern.
 
-#### USA  
-In the US:
+- **Log Property Prices vs. Log PCE** demonstrates a **weak negative association**, indicating a possible decoupling of housing markets and consumer behavior under inflationary conditions.
 
-- **“The Inflation vs. Log Consumption Expenditure scatter plot reveals a distinct downward trend, mirroring the regression output where inflation had a significant negative impact on spending.”**
+![UK - Economic Indicators vs PCE](images/scatter_uk.png)
 
-- **“The relationship between Inflation and Property Prices (log) is weak and lacks direction, consistent with the negligible R² and high p-value observed earlier.”**
+---
 
-- **“As with the other countries, Unemployment Rate does not appear to have a strong visual relationship with inflation.”**
+### United States
 
-![Scatter Plot - USA](images/scatter_us.png)  
+- **Inflation vs. Log PCE** exhibits a noticeable **downward trend**, indicating that higher inflation may deter consumer spending—consistent with the model output.
 
+- **Unemployment Rate vs. Log PCE** does not show a strong linear pattern, suggesting little predictive power.
 
-**Implication:**  
-The scatter plot analysis confirms and visually reinforces earlier statistical findings. Inflation tends to suppress consumption expenditure in both **Canada** and the **United States**, with visible downward trends in both cases.  
-In the UK, inflation appears to most strongly affect **property prices**, suggesting a housing market more sensitive to inflationary forces.
+- **Log Property Prices vs. Log PCE** displays a **slightly positive but weak** association.
 
-The consistency across different types of analyses (correlation, regression, scatter plots) enhances the **credibility and robustness** of these conclusions, while the visual format helps identify nonlinearities and residual noise in the data.
+![USA - Economic Indicators vs PCE](images/scatter_us.png)
 
-The log transformation highlights a clear nonlinear association between Property_Prices and Consumption_Expenditure.
-> **Note:** All scatter plots are based on log-transformed values where appropriate (e.g., for Property_Prices and Consumption_Expenditure).
+### 5. Multiple Regression Analysis: Determinants of Personal Consumption Expenditure (PCE)
 
+To identify which economic indicators significantly influence personal consumption expenditure, we conducted multiple linear regression analyses for **Canada**, the **United Kingdom**, and the **United States**.
 
-### 5. Regression Analysis: Impact of Inflation on Key Indicators
+The dependent variable in all models is **log-transformed PCE** (`Log_PCE`), while the independent variables include:
 
-To explore how inflation influences other socio-economic indicators, we performed simple linear regressions with **Inflation** as the independent variable and three dependent variables:
-
+- **Inflation**
+- **Unemployment Rate**
 - **Log_Property_Prices**
-- **Unemployment_Rate**
-- **Log_Consumption_Expenditure**
-
-We conducted these regressions separately for Canada, the UK, and the USA. The results are summarized below.
 
 ---
 
-#### **Canada**
-| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value (Inflation) |
-|------------------------------|-------------------------:|----------:|----------:|---------------------:|
-| Log_Property_Prices          |                  -0.0630 |     4.5315 |     0.1929 |              0.0009  |
-| Unemployment_Rate            |                  -0.0292 |     7.9709 |     0.0026 |              0.7154  |
-| Log_Consumption_Expenditure  |                  -0.0793 |    12.7505 |     0.3720 |              0.0000  |
+#### 🇨🇦 **Canada**
+
+| Variable               | Coefficient | p-value | Significance |
+|------------------------|------------:|--------:|--------------|
+| Inflation              |    -0.0294  |  0.0000 | Significant |
+| Unemployment Rate      |     0.0181  |  0.0606 | Not significant |
+| Log_Property_Prices    |     0.7830  |  0.0000 | Significant |
+| **R-squared**          | **0.928**   |         | Very Strong Fit |
 
 > **Insights:**  
-> - Inflation is **significantly negatively associated** with **Log_Property_Prices** and **Log_Consumption_Expenditure**, suggesting that as inflation rises, both metrics tend to decrease.
-> - The **R-squared** for consumption expenditure is relatively strong (0.37), indicating a better model fit.
-> - There is **no significant relationship** between inflation and unemployment in Canada (p = 0.7154).
+> - PCE **decreases significantly** as **inflation increases**, suggesting erosion in purchasing power.  
+> - **Property prices** are strongly and positively associated with PCE, likely reflecting wealth effects or economic confidence.  
+> - **Unemployment rate** has a weak and statistically insignificant effect at the 5% level.
 
 ---
 
-#### **UK**
-| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value (Inflation) |
-|------------------------------|-------------------------:|----------:|----------:|---------------------:|
-| Log_Property_Prices          |                  -0.6261 |     2.7952 |     0.5274 |              0.0002  |
-| Unemployment_Rate            |                  -0.0779 |     5.9651 |     0.0057 |              0.6976  |
-| Log_Consumption_Expenditure  |                   0.0335 |    12.8848 |     0.0853 |              0.1242  |
+#### 🇬🇧 **United Kingdom**
+
+| Variable               | Coefficient | p-value | Significance |
+|------------------------|------------:|--------:|--------------|
+| Inflation              |    -0.0226  |  0.466  | Not significant |
+| Unemployment Rate      |    -0.0866  |  0.002  | Significant |
+| Log_Property_Prices    |    -0.0696  |  0.066  | Marginal (p ≈ 0.066) |
+| **R-squared**          | **0.563**   |         | Moderate Fit |
 
 > **Insights:**  
-> - A **strong negative relationship** is found between inflation and **Log_Property_Prices** in the UK, with over 50% of the variation explained (R² = 0.53).
-> - No statistically significant effect of inflation is observed on unemployment or consumption expenditure.
+> - Inflation does **not** have a significant impact on PCE in the UK.  
+> - Interestingly, **unemployment** shows a **significant negative effect**, suggesting reduced consumer spending as joblessness rises.  
+> - Property prices have a **marginal** negative impact, significant only at the 10% level.
 
 ---
 
-#### **USA**
-| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value (Inflation) |
-|------------------------------|-------------------------:|----------:|----------:|---------------------:|
-| Log_Property_Prices          |                   0.0283 |     1.3457 |     0.0079 |              0.6169  |
-| Unemployment_Rate            |                   0.0545 |     5.9308 |     0.0080 |              0.5242  |
-| Log_Consumption_Expenditure  |                  -0.0994 |    14.8525 |     0.3587 |              0.0000  |
+#### 🇺🇸 **United States**
+
+| Variable               | Coefficient | p-value | Significance |
+|------------------------|------------:|--------:|--------------|
+| Inflation              |    -0.1046  |  0.001  | Significant |
+| Unemployment Rate      |    -0.1031  |  0.041  | Significant |
+| Log_Property_Prices    |     0.1010  |  0.301  | Not significant |
+| **R-squared**          | **0.390**   |         | Moderate Fit |
 
 > **Insights:**  
-> - Inflation shows a **significant negative impact** on **Log_Consumption_Expenditure** in the USA.
-> - However, no meaningful linear relationship is observed with unemployment or property prices (p-values > 0.5, very low R² values).
+> - PCE in the US is **negatively impacted by both inflation and unemployment**, indicating a vulnerable consumer base under economic stress.  
+> - **Property prices** are **not** a significant predictor of PCE in this case.
 
 ---
 
-> 💡 **Overall Observation:**  
-> Across all three countries, **Log_Consumption_Expenditure** appears to be most consistently and negatively influenced by inflation. In contrast, the relationship between inflation and **Unemployment_Rate** remains weak and statistically insignificant throughout.
+💡 **Overall Observation:**  
+Across the three countries, **inflation consistently exhibits a negative effect on PCE**, especially in **Canada** and the **USA**.  
+**Unemployment** becomes significant only in the **UK and USA**, while **property prices** are a strong positive predictor in **Canada**, but not elsewhere.
+
+This multivariate analysis supports the hypothesis that **macro-level economic conditions play a significant role in shaping household consumption patterns**, though their relative importance varies across countries.
 
 
-### 6. Visualizing Regression Relationships
+### 6. Visualizing Regression Relationships for PCE (log)
 
-To further understand how **Inflation** impacts key economic indicators, we created regression scatter plots using a custom plotting function. These visualizations include regression lines to highlight linear trends.
+To gain further insight into how different economic factors influence **personal consumption expenditure (PCE)**, we created regression scatter plots with fitted trend lines. These visualizations make it easier to observe the **direction and strength of linear relationships**.
 
-For each country, we analyzed the relationship between Inflation and the following:
+Each country’s plot shows how PCE (log) responds to:
+
+- **Inflation**
+- **Unemployment Rate**
 - **Log_Property_Prices**
-- **Unemployment_Rate**
-- **Log_Consumption_Expenditure**
 
-#### Canada  
+---
+
+#### 🇨🇦 Canada  
 ![Regression - Canada](images/relationship_canada.png)  
-> - A **clear negative trend** is visible between Inflation and both **Property Prices (log)** and **Consumption Expenditure (log)**.  
-> - This supports the regression summary, where both relationships were statistically significant.  
-> - **Unemployment Rate** shows no visible trend, consistent with its high p-value.
+> - **Inflation** and **PCE (log)** exhibit a **clear negative relationship**, supporting the strong regression result (p < 0.001, R² = 0.93).  
+> - **Unemployment Rate** shows a weak, nearly flat trend, consistent with its borderline statistical insignificance.  
+> - **Property Prices (log)** are **strongly positively correlated** with PCE, suggesting that rising real estate values may stimulate consumer spending.
 
 ---
 
-#### UK  
+#### 🇬🇧 United Kingdom  
 ![Regression - UK](images/relationship_uk.png)  
-> - The negative linear relationship between Inflation and **Property Prices (log)** is visually strong, matching the high R² from the regression.  
-> - Again, **Unemployment Rate** appears flat and scattered.  
-> - A **slight positive trend** is observed between Inflation and **Consumption Expenditure (log)**, though it's not statistically significant.
+> - **Unemployment Rate** and **PCE (log)** have a **clear negative trend**, aligning with the significant regression coefficient.  
+> - **Property Prices (log)** show a **weak negative slope**, marginally significant.  
+> - The relationship between **Inflation** and PCE is visually **unclear**, consistent with its lack of statistical significance.
 
 ---
 
-#### USA  
+#### 🇺🇸 United States  
 ![Regression - USA](images/relationship_us.png)  
-> - The **strongest visual relationship** is observed between Inflation and **Consumption Expenditure (log)** — consistent with the regression result (p < 0.001, R² = 0.36).  
-> - Other relationships appear **weak or random**, with scattered points and near-flat regression lines.
+> - **Inflation** has a **strong negative association** with PCE (log), as shown by the clear downward slope and significant regression results (p = 0.001).  
+> - **Unemployment Rate** also trends negatively, with statistical significance.  
+> - **Property Prices (log)** show a **weak and statistically insignificant** positive slope.
 
 ---
 
 > 🔍 **Conclusion:**  
-> These plots provide visual support for our regression findings. In particular, **log-transformed consumption expenditure** appears **consistently and negatively associated** with inflation in both Canada and the US, while property prices are most sensitive to inflation in the UK.
->
+> These regression plots reinforce our earlier statistical findings.  
+> - In both **Canada** and the **US**, **inflation consistently suppresses consumption expenditure**.  
+> - In the **UK**, **unemployment** emerges as the primary economic driver of PCE.  
+> - **Property prices** appear more impactful in **Canada**, but less so in the **UK** and **US**.
 
-### 7. 📊 Hypothesis Testing Results
 
-To statistically validate the effect of **inflation** on each economic indicator, we conducted **Simple Linear Regression (OLS)** analyses using a 5% significance level (α = 0.05).
+### 7. 📊 Hypothesis Testing Results for PCE (log)
 
-For each country, we tested the following hypotheses:
+To assess which economic indicators significantly influence **personal consumption expenditure (PCE)**, we performed **individual hypothesis tests** using p-values obtained from the multiple regression results.
 
-- **Null Hypothesis (H₀):** Inflation has **no significant effect** on the dependent variable.  
-- **Alternative Hypothesis (H₁):** Inflation has a **significant effect** on the dependent variable.
+For each country and predictor variable, we tested the following:
+
+- **Null Hypothesis (H₀):** The variable has **no significant effect** on PCE (log).  
+- **Alternative Hypothesis (H₁):** The variable has a **significant effect** on PCE (log).
 
 A hypothesis was **rejected** if the p-value was less than 0.05.
-  - If *p < 0.05* → Reject H₀  
-  - If *p ≥ 0.05* → Fail to Reject H₀
-
-
-#### Canada
-
-| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
-|------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
-| Log_Property_Prices          |                  -0.0630 |     4.5315 |     0.1929 |  0.0009 | **Reject H₀**            |
-| Unemployment_Rate            |                  -0.0292 |     7.9709 |     0.0026 |  0.7154 | Fail to Reject H₀        |
-| Log_Consumption_Expenditure  |                  -0.0793 |    12.7505 |     0.3720 |  0.0000 | **Reject H₀**            |
-
-> ✅ **Significant negative effects** found on property prices and consumption expenditure.
-> 📌 **Interpretation:**  
-> In Canada, inflation has a statistically significant **negative** effect on both **property prices** and **consumption expenditure**, while it has no meaningful impact on unemployment.  
-> This suggests that inflationary pressure erodes consumer spending power and suppresses housing market activity.
 
 ---
 
-#### UK
+#### 🇨🇦 Canada
 
-| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
-|------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
-| Log_Property_Prices          |                  -0.6261 |     2.7952 |     0.5274 |  0.0002 | **Reject H₀**            |
-| Unemployment_Rate            |                  -0.0779 |     5.9651 |     0.0057 |  0.6976 | Fail to Reject H₀        |
-| Log_Consumption_Expenditure  |                   0.0335 |    12.8848 |     0.0853 |  0.1242 | Fail to Reject H₀        |
+| Variable             | Coefficient | p-value | Hypothesis Decision     |
+|----------------------|------------:|--------:|--------------------------|
+| Inflation            |    -0.0294  |  0.0000 | **Reject H₀**            |
+| Unemployment Rate    |     0.0181  |  0.0606 | Fail to Reject H₀        |
+| Log_Property_Prices  |     0.7830  |  0.0000 | **Reject H₀**            |
 
-> ✅ Only **property prices** are significantly affected by inflation in the UK.
+> ✅ **Significant effects** found for both inflation (negative) and property prices (positive).  
 > 📌 **Interpretation:**  
-> In the UK, inflation shows a strong negative effect on **property prices**, but has **no significant effect** on either unemployment or consumption expenditure.  
-> The sensitivity of the UK housing market to inflation may reflect structural vulnerabilities, such as mortgage exposure or housing supply constraints.
+> In Canada, inflation reduces consumption expenditure, while rising property prices boost it.  
+> Unemployment rate does not have a statistically significant effect on PCE at the 5% level.
 
 ---
 
-#### USA
+#### 🇬🇧 United Kingdom
 
-| Dependent Variable            | Coefficient (Inflation) | Intercept | R-squared | p-value | Hypothesis Decision     |
-|------------------------------|-------------------------:|----------:|----------:|--------:|--------------------------|
-| Log_Property_Prices          |                   0.0283 |     1.3457 |     0.0079 |  0.6169 | Fail to Reject H₀        |
-| Unemployment_Rate            |                   0.0545 |     5.9308 |     0.0080 |  0.5242 | Fail to Reject H₀        |
-| Log_Consumption_Expenditure  |                  -0.0994 |    14.8525 |     0.3587 |  0.0000 | **Reject H₀**            |
+| Variable             | Coefficient | p-value | Hypothesis Decision     |
+|----------------------|------------:|--------:|--------------------------|
+| Inflation            |    -0.0226  |  0.4663 | Fail to Reject H₀        |
+| Unemployment Rate    |    -0.0866  |  0.0016 | **Reject H₀**            |
+| Log_Property_Prices  |    -0.0696  |  0.0655 | Fail to Reject H₀        |
 
-> ✅ In the USA, **only consumption expenditure** shows a statistically significant (and negative) relationship with inflation.
+> ✅ Only unemployment rate significantly impacts PCE in the UK.  
 > 📌 **Interpretation:**  
-> In the US, inflation has a **significant negative effect** on **consumption expenditure**, while it has **no meaningful effect** on property prices or unemployment.  
-> This indicates that American households may react more immediately to price volatility, possibly due to lower saving rates or higher debt sensitivity.
+> Consumer spending in the UK is primarily influenced by employment conditions, while inflation and property prices do not exhibit a statistically significant effect on PCE.
 
 ---
+
+#### 🇺🇸 United States
+
+| Variable             | Coefficient | p-value | Hypothesis Decision     |
+|----------------------|------------:|--------:|--------------------------|
+| Inflation            |    -0.1046  |  0.0012 | **Reject H₀**            |
+| Unemployment Rate    |    -0.1031  |  0.0410 | **Reject H₀**            |
+| Log_Property_Prices  |     0.1010  |  0.3007 | Fail to Reject H₀        |
+
+> ✅ Inflation and unemployment significantly influence PCE in the US.  
+> 📌 **Interpretation:**  
+> American consumption is negatively affected by both inflation and unemployment, whereas property prices show no significant impact on spending behavior.
+
+---
+
+> 🧠 **Summary Observation:**  
+> Across countries, **inflation** and **unemployment** have varying impacts on PCE.  
+> - **Inflation** significantly reduces consumption in **Canada** and the **US**, but not in the **UK**.  
+> - **Unemployment** is a significant determinant in the **UK** and **US**.  
+> - **Property prices** only matter in **Canada**, where they positively drive consumer expenditure.
+
 ## 8. Machine Learning Analysis
 
 To better understand how macroeconomic variables influence Personal Consumption Expenditure (PCE), we built a **Multiple Linear Regression** model. The model predicts PCE using the following economic indicators:
