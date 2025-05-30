@@ -4,12 +4,14 @@ DSA210_TermProject
 ## 📑 Table of Contents
 1. [Introduction](#introduction)  
 2. [Motivation](#motivation)  
-3. [Project Goal](#project-goal)
-4. [Data Sources](#data-sources)
-5. [Methodology](#methodology)
-6. [Hypothesis](#hypothesis)
-7. [Findings](#findings)
+3. [Project Goal](#project-goal)  
+4. [Data Sources](#data-sources)  
+5. [Methodology](#methodology)  
+6. [Hypothesis](#hypothesis)  
+7. [Findings](#findings)  
 8. [Machine Learning Analysis](#machine-learning-analysis)
+   1. [Extended ML Models (5-Fold CV)](#extended-ml-models-5-fold-cv)  
+   2. [Overall Model Comparison](#overall-model-comparison)
 
 ## Introduction
 
