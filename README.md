@@ -9,7 +9,7 @@ DSA210_TermProject
 5. [Methodology](#methodology)  
 6. [Hypothesis](#hypothesis)  
 7. [Findings](#findings)  
-8. [Machine Learning Analysis](#mMchine-Learning-Analysis)
+8. [Machine Learning Analysis](#Machine-Learning-Analysis)
    1. [Extended ML Models (5-Fold CV) Canada](#extended-ml-models-5-fold-cv-Canada)
    2. [Extended ML Models (5-Fold CV) United Kingdom](#extended-ml-models-5-fold-cv-United-Kingdom)
    3. [Extended ML Models (5-Fold CV) United States](#extended-ml-models-5-fold-cv-United-States)
