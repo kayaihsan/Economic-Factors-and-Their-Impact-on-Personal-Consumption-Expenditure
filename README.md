@@ -414,6 +414,15 @@ Each country’s plot shows how PCE (log) responds to:
 > - In the **UK**, **unemployment** emerges as the primary economic driver of PCE.  
 > - **Property prices** appear more impactful in **Canada**, but less so in the **UK** and **US**.
 
+## 📌 Summary: 
+Across the three countries, we observe **heterogeneous impacts** of inflation:
+- In **Canada**, both the housing market and consumption are sensitive to inflation.  
+- In the **UK**, the **housing market alone** reacts significantly.  
+- In the **US**, **only consumption expenditure** is significantly affected.
+
+These differences may arise from varying housing finance systems, consumer credit dynamics, or institutional responses to inflation.  
+Thus, **macro-level inflation does not produce uniform outcomes**, and economic policies must be tailored to country-specific structures and vulnerabilities.
+
 
 ### 7. 📊 Hypothesis Testing Results for PCE (log)
 
@@ -471,7 +480,7 @@ A hypothesis was **rejected** if the p-value was less than 0.05.
 
 ---
 
-> 🧠 **Summary Observation:**  
+> **Summary Observation:**  
 > Across countries, **inflation** and **unemployment** have varying impacts on PCE.  
 > - **Inflation** significantly reduces consumption in **Canada** and the **US**, but not in the **UK**.  
 > - **Unemployment** is a significant determinant in the **UK** and **US**.  
@@ -544,14 +553,278 @@ Separate models were trained for **Canada**, **United Kingdom**, and **United St
 These models show that the relationship between macroeconomic indicators and personal consumption is **not uniform across countries**. While Canada's economic behavior is well-captured using basic indicators, the UK and USA may require more complex models to account for behavioral or institutional differences.
 
 ---
+## Extended ML Models (5-Fold CV): Canada
 
->  _Note: All regression plots were generated using full datasets for visualization purposes, while model performance metrics were calculated on test sets._
+In addition to our Multiple Linear Regression models, we evaluated four non-linear regressors on **log-transformed PCE** using 5-fold cross-validation. Below is a summary of their out-of-fold performance for **Canada** (you can repeat this for the UK and USA with their respective plots and metrics):
 
-## 📌 Summary: 
-Across the three countries, we observe **heterogeneous impacts** of inflation:
-- In **Canada**, both the housing market and consumption are sensitive to inflation.  
-- In the **UK**, the **housing market alone** reacts significantly.  
-- In the **US**, **only consumption expenditure** is significantly affected.
+| Model           | CV R²   | CV MSE  |
+|-----------------|:-------:|:-------:|
+| **KNN**         | 0.896   | 0.016   |
+| Decision Tree   | 0.933   | 0.010   |
+| **Random Forest** | **0.962** | **0.006** |
+| XGBoost         | 0.951   | 0.007   |
 
-These differences may arise from varying housing finance systems, consumer credit dynamics, or institutional responses to inflation.  
-Thus, **macro-level inflation does not produce uniform outcomes**, and economic policies must be tailored to country-specific structures and vulnerabilities.
+---
+
+### K-Nearest Neighbors (KNN)
+![Canada – KNN (5-Fold CV)](images/canada_knn_cv.png)  
+*CV R²: 0.896, CV MSE: 0.016*
+
+- **Strengths**  
+  - Simple, instance-based method that captures local patterns in the data.  
+  - Requires no parametric assumptions—great baseline.  
+- **Weaknesses**  
+  - Suffers from the “curse of dimensionality” as features grow.  
+  - Sensitive to feature scaling (hence we standardize).  
+- **Interpretation**  
+  With `n_neighbors=5`, KNN explains ~90% of the variance in log(PCE). It smooths predictions by averaging the 5 nearest years in macroeconomic feature space.
+
+---
+
+### Decision Tree
+![Canada – Decision Tree (5-Fold CV)](images/canada_decision_tree_cv.png)  
+*CV R²: 0.933, CV MSE: 0.010*
+
+- **Strengths**  
+  - Captures non-linear splits and interactions automatically.  
+  - Easy to visualize and interpret a single tree.  
+- **Weaknesses**  
+  - Prone to overfitting individual folds, leading to higher MSE than ensembles.  
+- **Interpretation**  
+  Explains ~93% of variance but is sensitive to the particular training subset, causing instability across folds.
+
+---
+
+### Random Forest
+![Canada – Random Forest (5-Fold CV)](images/canada_random_forest_cv.png)  
+*CV R²: 0.962, CV MSE: 0.006*
+
+- **Strengths**  
+  - Aggregates many de-correlated trees to reduce overfitting.  
+  - Highest CV R² and lowest CV MSE among tested models.  
+- **Weaknesses**  
+  - Less interpretable than a single tree without feature-importance tools.  
+- **Interpretation**  
+  Delivers the best generalization performance, capturing complex variable interactions while maintaining stability.
+
+---
+
+### XGBoost
+![Canada – XGBoost (5-Fold CV)](images/canada_xgboost_cv.png)  
+*CV R²: 0.951, CV MSE: 0.007*
+
+- **Strengths**  
+  - Gradient boosting framework with built-in regularization.  
+  - Fine-tunable bias-variance trade-off via learning rate and tree parameters.  
+- **Weaknesses**  
+  - Requires careful hyperparameter tuning to avoid overfitting.  
+- **Interpretation**  
+  Explains ~95% of variance and offers an alternative ensemble strategy—with comparable accuracy to Random Forest—through sequential tree boosting.
+
+---
+
+**🔑 Key Takeaways for Canada**  
+- **Random Forest** achieves top performance (CV R² ≈ 0.96, CV MSE ≈ 0.006).  
+- **XGBoost** closely follows, offering strong regularization and boosting capabilities.  
+- **Decision Tree** provides a transparent baseline but is outperformed by ensemble methods.  
+- **KNN** yields solid, model-free performance (~0.90 CV R²), highlighting local trends in the data.
+
+## Extended ML Models (5-Fold CV): United Kingdom
+
+Below is a summary of out-of-fold performance on **log-transformed PCE** for the UK across four non-linear regressors using 5-fold cross-validation:
+
+| Model             | CV R²    | CV MSE  |
+|-------------------|:--------:|:-------:|
+| **KNN**           | 0.217    | 0.019   |
+| Decision Tree     | –0.207   | 0.029   |
+| **Random Forest** | 0.205    | 0.019   |
+| XGBoost           | –0.279   | 0.031   |
+
+---
+
+### K-Nearest Neighbors (KNN)
+![UK – KNN (5-Fold CV)](images/uk_knn_cv.png)  
+*CV R²: 0.217, CV MSE: 0.019*
+
+- **Strengths**  
+  - Captures local structure without assuming linearity.  
+  - Quick baseline to gauge neighborhood effects in the data.  
+- **Weaknesses**  
+  - Very low explanatory power for the UK (only ~22% of variance).  
+  - Sensitive to feature scaling and choice of `n_neighbors`.  
+- **Interpretation**  
+  KNN struggles to model UK consumption trends, indicating that “closest-years” averaging gives poor fit under UK’s macroeconomic variability.
+
+---
+
+### Decision Tree
+![UK – Decision Tree (5-Fold CV)](images/uk_decision_tree_cv.png)  
+*CV R²: –0.207, CV MSE: 0.029*
+
+- **Strengths**  
+  - Can split on non-linear thresholds and interactions.  
+- **Weaknesses**  
+  - Produces negative CV R², meaning it fits worse than a horizontal mean line.  
+  - Severely overfits individual folds and fails to generalize.  
+- **Interpretation**  
+  The single-tree model is unstable on UK data, providing predictions that are less accurate than a naive constant predictor.
+
+---
+
+### Random Forest
+![UK – Random Forest (5-Fold CV)](images/uk_random_forest_cv.png)  
+*CV R²: 0.205, CV MSE: 0.019*
+
+- **Strengths**  
+  - Aggregates many trees to reduce variance.  
+  - Slightly positive R², matching KNN’s MSE but still low explanatory power.  
+- **Weaknesses**  
+  - Only explains ~20% of variance, suggesting key drivers of UK PCE lie outside inflation, unemployment, and property prices.  
+- **Interpretation**  
+  Despite ensemble averaging, Random Forest cannot adequately capture UK consumption dynamics with the selected features.
+
+---
+
+### XGBoost
+![UK – XGBoost (5-Fold CV)](images/uk_xgboost_cv.png)  
+*CV R²: –0.279, CV MSE: 0.031*
+
+- **Strengths**  
+  - Robust gradient-boosting framework with regularization.  
+- **Weaknesses**  
+  - Negative R² indicates severe underfitting or over-regularization on UK folds.  
+  - Hyperparameters likely need extensive tuning for UK data.  
+- **Interpretation**  
+  XGBoost performs worst for the UK under default settings, highlighting that macroeconomic predictors alone may not suffice and that model configurations must be revisited.
+
+---
+
+**🔑 Key Takeaways for the UK**  
+- Overall, all four models exhibit low or negative CV R², indicating that **inflation**, **unemployment**, and **property prices** do **not** strongly predict UK PCE in a log-linear framework.  
+- **Random Forest** and **KNN** marginally outperform naïve baselines, but still explain only ~20% of variance.  
+- **Decision Tree** and **XGBoost** (with default params) perform worse than a constant mean predictor, signaling a need for either additional features or more aggressive hyperparameter search.
+
+
+
+## Extended ML Models (5-Fold CV): United States
+
+Below is a summary of out-of-fold performance on **log-transformed PCE** for the USA using four non-linear regressors with 5-fold cross-validation:
+
+| Model             | CV R²    | CV MSE  |
+|-------------------|:--------:|:-------:|
+| **KNN**           | 0.229    | 0.153   |
+| Decision Tree     | –0.374   | 0.272   |
+| **Random Forest** | 0.110    | 0.176   |
+| XGBoost           | –0.161   | 0.230   |
+
+---
+
+### K-Nearest Neighbors (KNN)
+![USA – KNN (5-Fold CV)](images/usa_knn_cv.png)  
+*CV R²: 0.229, CV MSE: 0.153*
+
+- **Strengths**  
+  - Captures local patterns without assuming a global functional form.  
+  - Simple baseline that highlights year-to-year similarities.  
+- **Weaknesses**  
+  - Explains only ~23% of variance in log(PCE) — limited by noisy features and high dimensionality.  
+  - Sensitive to choice of `n_neighbors` and scaling.  
+- **Interpretation**  
+  KNN’s modest R² indicates that “nearest-year” averaging in macroeconomic feature space only partially captures U.S. consumption dynamics.
+
+---
+
+### Decision Tree
+![USA – Decision Tree (5-Fold CV)](images/usa_decision_tree_cv.png)  
+*CV R²: –0.374, CV MSE: 0.272*
+
+- **Strengths**  
+  - Automatically handles non-linear splits and interactions.  
+- **Weaknesses**  
+  - Produces a large negative CV R², fitting worse than a mean-only model.  
+  - Severely overfits individual folds and fails to generalize.  
+- **Interpretation**  
+  The single-tree model is highly unstable on U.S. data, suggesting that its default depth/splits are not appropriate for these predictors.
+
+---
+
+### Random Forest
+![USA – Random Forest (5-Fold CV)](images/usa_random_forest_cv.png)  
+*CV R²: 0.110, CV MSE: 0.176*
+
+- **Strengths**  
+  - Reduces variance by aggregating many trees.  
+  - Improves over a single decision tree, achieving a small positive R².  
+- **Weaknesses**  
+  - Still explains only ~11% of variance—indicates that key drivers of U.S. PCE may be missing.  
+- **Interpretation**  
+  Random Forest’s slight improvement suggests ensemble averaging helps, but more informative features or alternative model classes are likely needed.
+
+---
+
+### XGBoost
+![USA – XGBoost (5-Fold CV)](images/usa_xgboost_cv.png)  
+*CV R²: –0.161, CV MSE: 0.230*
+
+- **Strengths**  
+  - Powerful gradient-boosting framework with regularization controls.  
+- **Weaknesses**  
+  - Negative R² indicates underfitting or over-regularization under default hyperparameters.  
+  - Requires extensive tuning for improved performance.  
+- **Interpretation**  
+  XGBoost underperforms relative to simpler ensembles on U.S. data—suggesting that default settings fail to capture the complexity of consumption drivers.
+
+---
+
+**🔑 Key Takeaways for the USA**  
+- Overall model performance is weak: even the best ensemble (**Random Forest**, CV R² ≈ 0.11) explains only a small fraction of variance.  
+- **KNN** provides a rough 23% explanatory power, highlighting some local structure but missing broader trends.  
+- **Decision Tree** and **XGBoost** (with default params) perform worse than a constant predictor, indicating a need for tighter hyperparameter search or alternative features.  
+
+ ## Overall Model Comparison
+
+Below is a consolidated summary of cross-validated performance for all four models across the three countries. We report **CV R²**, **CV MSE**, **CV MAE**, and **CV RMSE** (all on log-PCE).
+
+| Country | Model            | CV R²  | CV MSE | CV MAE | CV RMSE |
+|:--------|:-----------------|:------:|:------:|:------:|:-------:|
+| **Canada** | Decision Tree   | 0.933  | 0.010  | 0.068  | 0.101   |
+|            | **KNN**         | 0.896  | 0.016  | 0.076  | 0.126   |
+|            | **Random Forest** | **0.962** | **0.006** | **0.052** | **0.075** |
+|            | XGBoost         | 0.951  | 0.007  | 0.056  | 0.086   |
+| **UK**     | Decision Tree   | –0.207 | 0.029  | 0.115  | 0.171   |
+|            | **KNN**         | **0.217**  | **0.019**  | **0.118**  | **0.138**   |
+|            | **Random Forest** | 0.205  | 0.019  | 0.103  | 0.139   |
+|            | XGBoost         | –0.279 | 0.031  | 0.127  | 0.176   |
+| **USA**    | Decision Tree   | –0.374 | 0.272  | 0.387  | 0.522   |
+|            | **KNN**         | **0.229**  | **0.153**  | **0.297**  | **0.391**   |
+|            | Random Forest   | 0.110  | 0.176  | 0.314  | 0.420   |
+|            | XGBoost         | –0.161 | 0.230  | 0.373  | 0.480   |
+
+---
+
+### ✨ Key Insights & Recommendations
+
+- **Canada**  
+  - **Random Forest** dominates on all fronts (highest CV R² = 0.962, lowest CV MSE = 0.006, MAE = 0.052, RMSE = 0.075).  
+  - **XGBoost** closely trails, showing that gradient boosting is nearly as effective.  
+  - **Decision Tree** and **KNN** offer solid baselines but cannot match the stability of ensembles.  
+
+- **United Kingdom**  
+  - All models struggle, with CV R² around 0.20 or negative for boosting/tree.  
+  - **KNN** and **Random Forest** tie for best MSE/MAE (≈ 0.019 MSE), but still explain only ~20% of variance.  
+  - Indicates that **inflation**, **unemployment**, and **property prices** alone are insufficient to predict UK PCE.  
+
+- **United States**  
+  - Best performer is **KNN** (CV R² = 0.229), yet it explains barely 23% of variance; all others underperform.  
+  - High CV MSE/MAE/RMSE reflect substantial noise and missing drivers in our feature set.  
+
+---
+
+## **Overall Summary:**  
+> - **Ensemble methods** (Random Forest, XGBoost) yield **excellent results** in data‐rich, stable markets like Canada.  
+> - For **volatile or structurally different** markets (UK, USA), **simple models** (KNN) sometimes outperform overfitted trees/boosters, but **all models** indicate that key explanatory variables are missing.  
+> - Moving forward, a two‐pronged approach is advised:  
+>   1. **Feature Expansion & Engineering** (add macro/micro indicators, lags, interactions)  
+>   2. **Model Diversification** (time‐series and deep learning models, rigorous hyperparameter optimization)
+
+This comprehensive comparison underscores the **heterogeneity** of PCE drivers across economies and guides our next research steps toward more robust, tailored forecasting pipelines.
