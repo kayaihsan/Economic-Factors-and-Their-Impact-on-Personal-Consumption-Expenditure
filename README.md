@@ -10,8 +10,10 @@ DSA210_TermProject
 6. [Hypothesis](#hypothesis)  
 7. [Findings](#findings)  
 8. [Machine Learning Analysis](#machine-learning-analysis)
-   1. [Extended ML Models (5-Fold CV)](#extended-ml-models-5-fold-cv)  
-   2. [Overall Model Comparison](#overall-model-comparison)
+   1. [Extended ML Models (5-Fold CV)](#extended-ml-models-5-fold-cv-Canada)
+   2. [Extended ML Models (5-Fold CV)](#extended-ml-models-5-fold-cv)
+   3. [Extended ML Models (5-Fold CV)](#extended-ml-models-5-fold-cv)
+   4. [Overall Model Comparison](#overall-model-comparison)
 
 ## Introduction
 
